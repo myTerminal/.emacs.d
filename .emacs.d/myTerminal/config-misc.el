@@ -18,11 +18,16 @@
         "Welcome myTerminal!\n\n")
 
   ;;Interface
-  (setq frame-title-format "%b - emacs")
-  (menu-bar-mode -1)
-  (tool-bar-mode -1)
-  (scroll-bar-mode -1)
-  (set-face-attribute 'mode-line nil :box nil)
+  (setq frame-title-format
+        "%b - emacs")
+  (setq use-dialog-box
+        nil)
+  (menu-bar-mode 0)
+  (tool-bar-mode 0)
+  (scroll-bar-mode 0)
+  (set-face-attribute 'mode-line
+                      nil
+                      :box nil)
   (display-battery-mode)
 
   ;;Text editing
@@ -32,8 +37,11 @@
   (global-hl-line-mode -1)
   (setq-default indent-tabs-mode
                 nil)
+  (setq-default tab-width
+                4)
   (set-default 'cursor-type
                'hbar)
+  (delete-selection-mode 1)
   (setq kill-whole-line
         t)
   (prefer-coding-system 'utf-8-unix)
