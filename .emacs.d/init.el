@@ -10,7 +10,6 @@
 (mt/load-file "config-misc")
 (mt/load-file "config-workstation-variables")
 (mt/load-file "config-packages")
-(mt/load-file "config-jabber")
 (mt/load-file "config-file-associations")
 (mt/load-file "config-key-bindings")
 (mt/load-file "_zone-quotes-masseffect")

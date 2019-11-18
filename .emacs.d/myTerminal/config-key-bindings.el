@@ -55,8 +55,7 @@
       ("C-=" . mt/eval-and-replace)
       ("C-c e" . quickrun)
       ("C-c r" . quickrun-region)
-      ("C-c w" . quickrun-replace-region)
-      ("C-x C-g" . mt/jabber/dismiss-jabber-notification)))
+      ("C-c w" . quickrun-replace-region)))
 
   (mapc 'mt/assign-function-to-keys
         mt/my-keyboard-bindings))
