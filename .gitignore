@@ -6,7 +6,6 @@
 /.emacs.d/*
 !/.emacs.d/myTerminal
 /.emacs.d/myTerminal/*-custom.el
-!/.emacs.d/local-packages
 !/.emacs.d/sounds
 !/.emacs.d/init.el
 

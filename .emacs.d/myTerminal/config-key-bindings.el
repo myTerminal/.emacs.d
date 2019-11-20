@@ -41,8 +41,6 @@
       ("C-c C-p s f" . projectile-find-all-references)
       ("C-\\" . wg-switch-to-previous-workgroup)
       ;;Swanking
-      ("C-M-)" . transparency-increase)
-      ("C-M-(" . transparency-decrease)
       ("C-x ~" . sublimity-mode)
       ;;Misc
       ("C-c \\" . wdired-change-to-wdired-mode)
