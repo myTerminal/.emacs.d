@@ -20,6 +20,12 @@ Not all of my Emacs configuration moved out of [dotfiles](https://github.com/myT
 
 Obviously, the configuration contained in this repository has been designed to be able to be plugged right into my dotfiles through [this init.el](https://github.com/myTerminal/dotfiles/blob/master/.emacs.d/init.el), just like my other tiny Emacs starter-kits [super-emacs](https://github.com/myTerminal/super-emacs) and [ample-emacs](https://github.com/myTerminal/ample-emacs) have been designed to.
 
+## External dependencies
+
+###  [aspell](http://aspell.net) for spell-check
+
+The configuration checks for the presence of this package and sets up `ispell` to work with it for spell-check. Refer to [the official site](http://aspell.net) for instructions on how to install it on your operating system.
+
 ## References
 - [My dotfiles](https://github.com/myTerminal/dotfiles) - The 'replicable' heart of my computer(s) and a host for this Emacs configuration
 - [super-emacs](https://github.com/myTerminal/super-emacs) - An out-of-the-box Emacs configuration with super-powers
