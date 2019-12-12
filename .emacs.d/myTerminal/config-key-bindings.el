@@ -14,7 +14,7 @@
       ("C-S-<left>" . buf-move-left)
       ("C-S-<right>" . buf-move-right)
       ("C-%" . window-shaper-mode)
-      ("C-&" . balance-windows)
+      ("C-+" . balance-windows)
       ("C-;" . ace-window)
       ;;Text-editing
       ("C-}" . mc/mark-next-like-this)
