@@ -208,6 +208,8 @@
                                              emacs-daily-events)
              (outer-spaces-mode " _a_"
                                 outer-spaces)
+             (flyspell-mode " Aa"
+                            flyspell)
              (eldoc-mode nil
                          eldoc)
              (buffer-face-mode nil
