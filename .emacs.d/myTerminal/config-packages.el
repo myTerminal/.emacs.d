@@ -28,7 +28,6 @@
       vue-mode
       markdown-mode
       typescript-mode
-      haskell-mode
       csharp-mode
       latex-preview-pane
       ;;Programming tools
@@ -170,9 +169,6 @@
     "Major mode for editing Markdown files"
     t)
 
-  (add-to-list 'completion-ignored-extensions
-               ".hi")
-
   (if (eq system-type
           'windows-nt)
       (setq projectile-indexing-method
@@ -289,12 +285,4 @@
             'outer-spaces-mode)
 
   (add-hook 'js2-mode-hook
-            'ac-js2-mode)
-
-  (add-hook 'haskell-mode-hook
-            'turn-on-haskell-doc-mode)
-  (add-hook 'haskell-mode-hook
-            'inf-haskell-mode)
-  (add-hook 'haskell-mode-hook
-            'turn-on-haskell-indentation))
-
+            'ac-js2-mode))
