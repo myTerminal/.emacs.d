@@ -40,7 +40,7 @@
   "Changes line-endings of current file to utf-8-unix."
   (interactive)
   (set-buffer-file-coding-system
-    'utf-8-unix))
+   'utf-8-unix))
 
 (defun mt/move-line-up ()
   "Moves the current line up by one step."
