@@ -63,8 +63,6 @@
       (add-to-list 'exec-path (file-name-directory path-to-aspell))
       (setq ispell-program-name "aspell")
       (setq ispell-extra-args '("--sug-mode=ultra" "--lang=en_US")))))
-(add-hook 'text-mode-hook
-          'flyspell-mode)
 
 ;;Package archives and 'customize'
 (setq custom-file

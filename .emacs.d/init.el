@@ -12,6 +12,7 @@
 (mt/load-file "config-packages")
 (mt/load-file "config-file-associations")
 (mt/load-file "config-key-bindings")
+(mt/load-file "config-hooks")
 (mt/load-file "_zone-quotes-masseffect")
 
 ;;Finish startup

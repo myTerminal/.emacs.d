@@ -270,11 +270,3 @@
            (hi-lock-mode nil
                          hi-lock)))
 
-(add-hook 'prog-mode-hook
-          'display-line-numbers-mode)
-
-(add-hook 'prog-mode-hook
-          'outer-spaces-mode)
-
-(add-hook 'js2-mode-hook
-          'ac-js2-mode)
