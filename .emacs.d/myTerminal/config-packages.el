@@ -1,3 +1,4 @@
+;;Installing packages using package.el
 (progn
   (when (not package-archive-contents)
     (package-refresh-contents))
@@ -76,6 +77,7 @@
             (package-install p)))
         mt/packages))
 
+;;Installing packages using quelpa
 (progn
   (setq quelpa-update-melpa-p
         nil)
@@ -107,29 +109,15 @@
   (quelpa '(projectile-extras :fetcher github
                               :repo "myTerminal/projectile-extras")))
 
+;;Setting up packages
 (progn
   (ac-config-default)
-
-  (add-hook 'prog-mode-hook
-            'display-line-numbers-mode)
-
-  (add-hook 'prog-mode-hook
-            'outer-spaces-mode)
-
-  (add-hook 'js2-mode-hook
-            'ac-js2-mode)
-
-  (setq inferior-js-program-command
-        "node --interactive")
 
   (global-undo-tree-mode)
 
   (require 'sublimity-scroll)
 
-  (autoload 'markdown-mode
-    "markdown-mode"
-    "Major mode for editing Markdown files"
-    t)
+  (global-anzu-mode +1)
 
   (dumb-jump-mode)
 
@@ -142,23 +130,20 @@
     "Ace jump back"
     t)
 
-  (if (eq system-type
-          'windows-nt)
-      (setq projectile-indexing-method
-            'alien))
-  (setq projectile-switch-project-action
-        (lambda ()
-          (cond ((and (fboundp 'neo-global--window-exists-p)
-                      (neo-global--window-exists-p))
-                 (neotree-projectile-action))
-                (t (counsel-projectile)))))
-  (setq projectile-mode-line
-        '(:eval (format " Project:%s"
-                        (projectile-project-name))))
-  (projectile-mode)
-  (define-key projectile-mode-map
-              (kbd "C-c C-p")
-              'projectile-command-map)
+  (setq wg-prefix-key
+        (kbd "M-z"))
+  (setq wg-session-file
+        (concat mt/config-root
+		        "workgroups2-session-file"))
+  (setq wg-session-load-on-start
+        nil)
+  (workgroups-mode 1)
+  (setq wg-emacs-exit-save-behavior
+        'ask)
+  (setq wg-workgroups-mode-exit-save-behavior
+        'ask)
+  (setq wg-mode-line-display-on
+        t)
 
   (setq ibuffer-formats
         '((mark
@@ -177,22 +162,100 @@
            " "
            filename-and-process)))
 
+  (setq inferior-js-program-command
+        "node --interactive")
+
+  (autoload 'markdown-mode
+    "markdown-mode"
+    "Major mode for editing Markdown files"
+    t)
+
+  (add-to-list 'completion-ignored-extensions
+               ".hi")
+
+  (if (eq system-type
+          'windows-nt)
+      (setq projectile-indexing-method
+            'alien))
+  (setq projectile-switch-project-action
+        (lambda ()
+          (cond ((and (fboundp 'neo-global--window-exists-p)
+                      (neo-global--window-exists-p))
+                 (neotree-projectile-action))
+                (t (counsel-projectile)))))
+  (setq projectile-mode-line
+        '(:eval (format " Project:%s"
+                        (projectile-project-name))))
+  (projectile-mode)
+  (define-key projectile-mode-map
+    (kbd "C-c C-p")
+    'projectile-command-map)
+
   (global-diff-hl-mode)
 
-  (setq wg-prefix-key
-        (kbd "M-z"))
-  (setq wg-session-file
-        (concat mt/config-root
-		"workgroups2-session-file"))
-  (setq wg-session-load-on-start
-        nil)
-  (workgroups-mode 1)
-  (setq wg-emacs-exit-save-behavior
-        'ask)
-  (setq wg-workgroups-mode-exit-save-behavior
-        'ask)
-  (setq wg-mode-line-display-on
+  (which-key-mode)
+
+  (ivy-mode 1)
+  (setq ivy-use-virtual-buffers
         t)
+  (setq projectile-completion-system
+        'ivy)
+  (counsel-projectile-mode)
+
+  (require 'telephone-line)
+  (setq telephone-line-lhs
+        '((evil   . (telephone-line-misc-info-segment))
+          (accent . (telephone-line-buffer-segment
+                     telephone-line-workgroups2-segment))
+          (nil    . (telephone-line-minor-mode-segment))))
+  (setq telephone-line-rhs
+        '((nil    . (telephone-line-process-segment
+                     telephone-line-vc-segment
+                     telephone-line-erc-modified-channels-segment))
+          (accent . (telephone-line-major-mode-segment))
+          (evil   . (telephone-line-airline-position-segment))))
+  (setq telephone-line-primary-left-separator
+        telephone-line-gradient)
+  (setq telephone-line-primary-right-separator
+        telephone-line-gradient)
+  (telephone-line-mode t)
+
+  (theme-looper-set-favorite-themes '(overcast
+                                      material
+                                      green-phosphor
+                                      hemisu-dark
+                                      leuven))
+
+  (myterminal-controls-set-controls-data
+   '(("b" "Create temporary buffer"
+      emacs-new-buffer-now
+      t)
+     ("." "Switch to next color-theme"
+      theme-looper-enable-next-theme)
+     ("," "Switch to previous color-theme"
+      theme-looper-enable-previous-theme)
+     ("[" "Decrease transparency"
+      transparency-decrease)
+     ("]" "Increase transparency"
+      transparency-increase)))
+
+  (setq emacs-sounds-bell-sound
+        (concat mt/config-root
+                "sounds/bell.wav"))
+  (setq emacs-sounds-find-file-sound
+        (concat mt/config-root
+                "sounds/file-change.wav"))
+  (setq emacs-sounds-window-change-sound
+        (concat mt/config-root
+                "sounds/window-change.wav"))
+
+  (emacs-daily-events-global-mode)
+  (emacs-daily-events-set-events mt/workstation-variables/daily-events)
+
+  (emacs-home-set-day-start-time mt/workstation-variables/day-start-time)
+  (emacs-home-set-day-end-time mt/workstation-variables/day-end-time)
+  (emacs-home-set-favorite-files mt/workstation-variables/favorite-files)
+  (emacs-home-set-favorite-functions mt/workstation-variables/favorite-functions)
 
   (delight '((anzu-mode nil
                         anzu)
@@ -215,80 +278,23 @@
              (buffer-face-mode nil
                                face-remap)
              (hi-lock-mode nil
-                           hi-lock)))
+                           hi-lock))))
 
-  (theme-looper-set-favorite-themes '(overcast
-                                      material
-                                      green-phosphor
-                                      hemisu-dark
-                                      leuven))
+;;Setting up mode-hooks
+(progn
+  (add-hook 'prog-mode-hook
+            'display-line-numbers-mode)
 
-  (myterminal-controls-set-controls-data
-   '(("b" "Create temporary buffer"
-      emacs-new-buffer-now
-      t)
-     ("." "Switch to next color-theme"
-      theme-looper-enable-next-theme)
-     ("," "Switch to previous color-theme"
-      theme-looper-enable-previous-theme)
-     ("[" "Decrease transparency"
-      transparency-decrease)
-     ("]" "Increase transparency"
-      transparency-increase)))
+  (add-hook 'prog-mode-hook
+            'outer-spaces-mode)
 
-  (global-anzu-mode +1)
-
-  (telephone-line-mode t)
-  (setq telephone-line-lhs
-        '((evil   . (telephone-line-misc-info-segment))
-          (accent . (telephone-line-buffer-segment
-                     telephone-line-workgroups2-segment))
-          (nil    . (telephone-line-minor-mode-segment))))
-  (setq telephone-line-rhs
-        '((nil    . (telephone-line-process-segment
-                     telephone-line-vc-segment
-                     telephone-line-erc-modified-channels-segment))
-          (accent . (telephone-line-major-mode-segment))
-          (evil   . (telephone-line-airline-position-segment))))
-  (setq telephone-line-primary-left-separator
-        telephone-line-gradient)
-  (setq telephone-line-primary-right-separator
-        telephone-line-gradient)
-  (telephone-line-mode t)
+  (add-hook 'js2-mode-hook
+            'ac-js2-mode)
 
   (add-hook 'haskell-mode-hook
             'turn-on-haskell-doc-mode)
   (add-hook 'haskell-mode-hook
             'inf-haskell-mode)
   (add-hook 'haskell-mode-hook
-            'turn-on-haskell-indentation)
-  (add-to-list 'completion-ignored-extensions
-               ".hi")
-
-  (which-key-mode)
-
-  (setq emacs-sounds-bell-sound
-        (concat mt/config-root
-                "sounds/bell.wav"))
-  (setq emacs-sounds-find-file-sound
-        (concat mt/config-root
-                "sounds/file-change.wav"))
-  (setq emacs-sounds-window-change-sound
-        (concat mt/config-root
-                "sounds/window-change.wav"))
-
-  (emacs-daily-events-global-mode)
-  (emacs-daily-events-set-events mt/workstation-variables/daily-events)
-
-  (emacs-home-set-day-start-time mt/workstation-variables/day-start-time)
-  (emacs-home-set-day-end-time mt/workstation-variables/day-end-time)
-  (emacs-home-set-favorite-files mt/workstation-variables/favorite-files)
-  (emacs-home-set-favorite-functions mt/workstation-variables/favorite-functions)
-
-  (ivy-mode 1)
-  (setq ivy-use-virtual-buffers
-        t)
-  (setq projectile-completion-system
-        'ivy)
-  (counsel-projectile-mode))
+            'turn-on-haskell-indentation))
 
