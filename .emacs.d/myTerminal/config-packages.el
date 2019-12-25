@@ -17,6 +17,7 @@
     buffer-move
     ibuffer-vc
     ;;Language modes
+    markdown-mode
     web-mode
     js2-mode
     ac-js2
@@ -24,8 +25,8 @@
     scss-mode
     sass-mode
     vue-mode
-    markdown-mode
     typescript-mode
+    rust-mode
     csharp-mode
     latex-preview-pane
     ;;Programming tools

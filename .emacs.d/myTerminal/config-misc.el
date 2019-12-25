@@ -1,8 +1,11 @@
 ;;System
 (if (eq system-type
         'darwin)
-    (add-to-list 'exec-path
-                 "/usr/local/bin"))
+    (progn
+      (add-to-list 'exec-path
+                   "/usr/local/bin")
+      (add-to-list 'exec-path
+                   "~/.cargo/bin")))
 
 ;;User
 (setq user-full-name
