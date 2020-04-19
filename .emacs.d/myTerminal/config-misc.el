@@ -117,8 +117,6 @@
 (require 'zone)
 (setq zone-programs
       [zone-pgm-quotes])
-(setq org-hide-leading-stars
-      t)
 (setq org-todo-keywords
       '((sequence "DEFERRED(r)" "TODO(t)" "BLOCKED(b)" "IN-PROGRESS(p)" "|"
                   "ALMOST-THERE(a)" "DONE(d)" "CANCELLED(c)" "DELEGATED(g)")))
