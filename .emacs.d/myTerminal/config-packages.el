@@ -33,7 +33,6 @@
     projectile
     diff-hl
     column-enforce-mode
-    indent-guide
     magit
     minimap
     skewer-mode
@@ -50,7 +49,6 @@
     overcast-theme
     ;;Super-powers
     which-key
-    smex
     counsel
     counsel-projectile
     ivy-hydra
