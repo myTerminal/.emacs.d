@@ -31,8 +31,9 @@
     ("C-c s" . swiper)
     ("C-c ^" . mt/reload-current-file)
     ;;Navigation
-    ("C->" . ace-jump-mode)
-    ("C-<" . ace-jump-mode-pop-mark)
+    ("C-c j" . avy-goto-char-timer)
+    ("C-c k" . avy-goto-word-1)
+    ("C-c l" . avy-goto-line)
     ("C-c /" . neotree-toggle)
     ("C-'" . dumb-jump-go)
     ("C-\"" . dumb-jump-back)

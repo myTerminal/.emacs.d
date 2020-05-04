@@ -11,7 +11,7 @@
     anzu
     ;;Navigation
     dumb-jump
-    ace-jump-mode
+    avy
     ace-window
     workgroups2
     buffer-move
@@ -112,15 +112,6 @@
 (global-anzu-mode +1)
 
 (dumb-jump-mode)
-
-(autoload 'ace-jump-mode
-  "ace-jump-mode"
-  "Emacs quick move minor mode"
-  t)
-(autoload 'ace-jump-mode-pop-mark
-  "ace-jump-mode"
-  "Ace jump back"
-  t)
 
 (setq wg-prefix-key
       (kbd "M-z"))
