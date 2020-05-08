@@ -2,12 +2,12 @@
 
 !/.gitignore
 
-!/.emacs.d
-/.emacs.d/*
-!/.emacs.d/myTerminal
-/.emacs.d/myTerminal/*-custom.el
-!/.emacs.d/sounds
-!/.emacs.d/init.el
+!/emacs
+/emacs/*
+!/emacs/myTerminal
+/emacs/myTerminal/*-custom.el
+!/emacs/sounds
+!/emacs/init.el
 
 !/LICENSE
 !/README.md

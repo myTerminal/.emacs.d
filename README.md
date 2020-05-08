@@ -18,7 +18,7 @@ Rather than making commit messages longer by adding phrases like "for Emacs" for
 
 Not all of my Emacs configuration moved out of [dotfiles](https://github.com/myTerminal/dotfiles.git). There's still a tiny script to load a 'compatible' configuration to use following a prompt at startup.
 
-Obviously, the configuration contained in this repository has been designed to be able to be plugged right into my dotfiles through [this init.el](https://github.com/myTerminal/dotfiles/blob/master/.emacs.d/init.el), just like my other tiny Emacs starter-kits [super-emacs](https://github.com/myTerminal/super-emacs) and [ample-emacs](https://github.com/myTerminal/ample-emacs) have been designed to.
+Obviously, the configuration contained in this repository has been designed to be able to be plugged right into my dotfiles through [this init.el](https://github.com/myTerminal/dotfiles/blob/master/.config/emacs/init.el), just like my other tiny Emacs starter-kits [super-emacs](https://github.com/myTerminal/super-emacs) and [ample-emacs](https://github.com/myTerminal/ample-emacs) have been designed to.
 
 ## External dependencies
 
