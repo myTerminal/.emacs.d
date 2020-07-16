@@ -4,7 +4,7 @@
 (defvar mt/packages
   '(;;Text-editing
     multiple-cursors
-    auto-complete
+    company
     undo-tree
     sublimity
     rainbow-mode
@@ -20,7 +20,6 @@
     markdown-mode
     web-mode
     js2-mode
-    ac-js2
     less-css-mode
     scss-mode
     sass-mode
@@ -102,8 +101,6 @@
                         :repo "myTerminal/window-shaper"))
 (quelpa '(projectile-extras :fetcher github
                             :repo "myTerminal/projectile-extras"))
-
-(ac-config-default)
 
 (global-undo-tree-mode)
 
@@ -241,8 +238,8 @@
                       anzu)
            (undo-tree-mode nil
                            undo-tree)
-           (auto-complete-mode nil
-                               auto-complete)
+           (company-mode nil
+                         company)
            (which-key-mode nil
                            which-key)
            (workgroups-mode nil
