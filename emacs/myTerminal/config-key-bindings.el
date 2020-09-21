@@ -43,6 +43,7 @@
     ;;Swanking
     ("C-c &" . sublimity-mode)
     ;;Misc
+    ("C-c ." . term)
     ("M-x" . counsel-M-x)
     ("C-=" . mt/eval-and-replace)
     ("C-," . myterminal-controls-open-controls)
