@@ -23,6 +23,7 @@
     less-css-mode
     scss-mode
     sass-mode
+    yaml-mode
     vue-mode
     typescript-mode
     rust-mode
