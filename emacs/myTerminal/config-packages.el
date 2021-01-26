@@ -54,6 +54,7 @@
     ivy-hydra
     ;;Visual tweaks
     telephone-line
+    fira-code-mode
     ;;Networking tools
     mew
     jabber

@@ -5,6 +5,9 @@
           'display-line-numbers-mode)
 
 (add-hook 'prog-mode-hook
+          'fira-code-mode)
+
+(add-hook 'prog-mode-hook
           'outer-spaces-mode)
 
 (add-hook 'text-mode-hook
