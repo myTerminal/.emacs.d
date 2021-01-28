@@ -117,15 +117,15 @@
 (setq wg-session-file
       (concat mt/config-root
 		      "workgroups2-session-file"))
-(setq wg-session-load-on-start
-      nil)
+(setq wg-session-load-on-start 'ask
+      wg-workgroups-mode-exit-save-behavior 'ask
+      wg-emacs-exit-save-behavior 'ask
+      wg-mode-line-display-on t
+      wg-flag-modified t
+      wg-mode-line-decor-left-brace "{"
+      wg-mode-line-decor-right-brace "}"
+      wg-mode-line-decor-divider ":")
 (workgroups-mode 1)
-(setq wg-emacs-exit-save-behavior
-      'ask)
-(setq wg-workgroups-mode-exit-save-behavior
-      'ask)
-(setq wg-mode-line-display-on
-      t)
 
 (setq ibuffer-formats
       '((mark
