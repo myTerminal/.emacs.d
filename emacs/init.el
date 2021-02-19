@@ -7,12 +7,12 @@
 			mt/config-root))
 
 ;;Load config files sequentially
-(mt/load-file "config-misc")
-(mt/load-file "config-workstation-variables")
-(mt/load-file "config-packages")
-(mt/load-file "config-file-associations")
-(mt/load-file "config-key-bindings")
-(mt/load-file "config-hooks")
+(mt/load-file "standard/misc")
+(mt/load-file "standard/workstation-variables")
+(mt/load-file "standard/packages")
+(mt/load-file "standard/file-associations")
+(mt/load-file "standard/key-bindings")
+(mt/load-file "standard/hooks")
 (mt/load-file "_zone-quotes-masseffect")
 
 ;;Finish startup

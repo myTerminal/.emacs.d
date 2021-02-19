@@ -5,7 +5,7 @@
 !/emacs
 /emacs/*
 !/emacs/myTerminal
-/emacs/myTerminal/*-custom.el
+/emacs/myTerminal/standard/*-custom.el
 !/emacs/sounds
 !/emacs/init.el
 
