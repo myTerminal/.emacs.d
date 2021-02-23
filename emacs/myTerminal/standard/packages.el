@@ -229,12 +229,6 @@
               "sounds/window-change.wav"))
 
 (emacs-daily-events-global-mode)
-(emacs-daily-events-set-events mt/workstation-variables/daily-events)
-
-(emacs-home-set-day-start-time mt/workstation-variables/day-start-time)
-(emacs-home-set-day-end-time mt/workstation-variables/day-end-time)
-(emacs-home-set-favorite-files mt/workstation-variables/favorite-files)
-(emacs-home-set-favorite-functions mt/workstation-variables/favorite-functions)
 
 (delight '((anzu-mode nil
                       anzu)
