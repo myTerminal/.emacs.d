@@ -101,7 +101,7 @@
 (setq wg-session-file
       (concat mt/config-root
 		      "workgroups2-session-file"))
-(setq wg-session-load-on-start 'ask
+(setq wg-session-load-on-start nil
       wg-workgroups-mode-exit-save-behavior 'ask
       wg-emacs-exit-save-behavior 'ask
       wg-mode-line-display-on t
