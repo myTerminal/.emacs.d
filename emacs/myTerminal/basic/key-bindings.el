@@ -38,6 +38,7 @@
     ("C-\"" . dumb-jump-back)
     ("C-c C-p s o" . projectile-find-all-occurrences)
     ("C-c C-p s f" . projectile-find-all-references)
+    ("M-\\" . wg-reload-session)
     ("C-\\" . wg-switch-to-previous-workgroup)
     ;;Misc
     ("C-c ." . term)
