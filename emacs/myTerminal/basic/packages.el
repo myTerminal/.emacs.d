@@ -170,11 +170,7 @@
    ("." "Switch to next color-theme"
     theme-looper-enable-next-theme)
    ("," "Switch to previous color-theme"
-    theme-looper-enable-previous-theme)
-   ("[" "Decrease transparency"
-    transparency-decrease)
-   ("]" "Increase transparency"
-    transparency-increase)))
+    theme-looper-enable-previous-theme)))
 
 (setq emacs-sounds-bell-sound
       (concat mt/config-root
