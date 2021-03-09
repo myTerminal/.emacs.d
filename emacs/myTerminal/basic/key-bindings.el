@@ -41,11 +41,8 @@
     ;; Misc
     ("C-c ." . term)
     ("C-." . emacs-home-show)
-    ("M-x" . counsel-M-x)
     ("C-=" . mt/eval-and-replace)
-    ("C-c e" . quickrun)
-    ("C-c r" . quickrun-region)
-    ("C-c t" . quickrun-replace-region)))
+    ("M-x" . counsel-M-x)))
 
 (mapc 'mt/assign-function-to-keys
       mt/keyboard-bindings-basic)
@@ -54,3 +51,12 @@
 (define-key dired-mode-map
   (kbd "C-c |")
   'wdired-change-to-wdired-mode)
+(define-key prog-mode-map
+  (kbd "C-c e")
+  'quickrun)
+(define-key prog-mode-map
+  (kbd "C-c r")
+  'quickrun-region)
+(define-key prog-mode-map
+  (kbd "C-c t")
+  'quickrun-replace-region)
