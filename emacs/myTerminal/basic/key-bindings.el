@@ -44,10 +44,14 @@
     ("M-x" . counsel-M-x)
     ("C-=" . mt/eval-and-replace)
     ("C-." . emacs-home-show)
-    ("C-c |" . wdired-change-to-wdired-mode)
     ("C-c e" . quickrun)
     ("C-c r" . quickrun-region)
     ("C-c w" . quickrun-replace-region)))
 
 (mapc 'mt/assign-function-to-keys
       mt/keyboard-bindings-basic)
+
+;; Map-specific key-bindings
+(define-key dired-mode-map
+  (kbd "C-c |")
+  'wdired-change-to-wdired-mode)
