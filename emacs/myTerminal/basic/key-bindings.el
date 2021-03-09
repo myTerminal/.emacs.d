@@ -1,6 +1,5 @@
 (defvar mt/keyboard-bindings-basic
   '(;; Zoning
-    ("C-c `" . zone)
     ("C-c ~" . mt/set-zoning)
     ("C-c !" . zone-leave-me-alone)
     ;; Buffer/Window management
@@ -41,12 +40,12 @@
     ("C-\\" . wg-switch-to-previous-workgroup)
     ;; Misc
     ("C-c ." . term)
+    ("C-." . emacs-home-show)
     ("M-x" . counsel-M-x)
     ("C-=" . mt/eval-and-replace)
-    ("C-." . emacs-home-show)
     ("C-c e" . quickrun)
     ("C-c r" . quickrun-region)
-    ("C-c w" . quickrun-replace-region)))
+    ("C-c t" . quickrun-replace-region)))
 
 (mapc 'mt/assign-function-to-keys
       mt/keyboard-bindings-basic)
