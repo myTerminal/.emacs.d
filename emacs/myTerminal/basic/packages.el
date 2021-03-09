@@ -47,7 +47,6 @@
     jabber
     ;;myTerminal's packages
     meta-presenter
-    myterminal-controls
     ;;Misc
     delight
     golden-ratio
@@ -162,15 +161,6 @@
 (setq projectile-completion-system
       'ivy)
 (counsel-projectile-mode)
-
-(myterminal-controls-set-controls-data
- '(("b" "Create temporary buffer"
-    emacs-new-buffer-now
-    t)
-   ("." "Switch to next color-theme"
-    theme-looper-enable-next-theme)
-   ("," "Switch to previous color-theme"
-    theme-looper-enable-previous-theme)))
 
 (setq emacs-sounds-bell-sound
       (concat mt/config-root

@@ -44,7 +44,6 @@
     ("C-c ." . term)
     ("M-x" . counsel-M-x)
     ("C-=" . mt/eval-and-replace)
-    ("C-," . myterminal-controls-open-controls)
     ("C-." . emacs-home-show)
     ("C-c |" . wdired-change-to-wdired-mode)
     ("C-c e" . quickrun)
