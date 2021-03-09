@@ -2,20 +2,20 @@
   (package-refresh-contents))
 
 (defvar mt/packages-basic
-  '(;;Text-editing
+  '(;; Text-editing
     multiple-cursors
     company
     undo-tree
     rainbow-mode
     anzu
-    ;;Navigation
+    ;; Navigation
     dumb-jump
     avy
     ace-window
     workgroups2
     buffer-move
     ibuffer-vc
-    ;;Language modes
+    ;; Language modes
     markdown-mode
     web-mode
     js2-mode
@@ -27,25 +27,25 @@
     typescript-mode
     rust-mode
     csharp-mode
-    ;;Programming tools
+    ;; Programming tools
     projectile
     column-enforce-mode
     magit
     quickrun
     restclient
-    ;;File-system
+    ;; File-system
     ranger
     neotree
     ztree
-    ;;Super-powers
+    ;; Super-powers
     which-key
     counsel
     counsel-projectile
     ivy-hydra
-    ;;Networking tools
+    ;; Networking tools
     mew
     jabber
-    ;;Misc
+    ;; Misc
     delight
     golden-ratio
     volume

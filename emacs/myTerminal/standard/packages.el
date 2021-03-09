@@ -2,23 +2,22 @@
   (package-refresh-contents))
 
 (defvar mt/packages-standard
-  '(;;Text-editing
+  '(;; Text-editing
     sublimity
-    ;;Language modes
+    ;; Language modes
     latex-preview-pane
-    ;;Programming tools
+    ;; Programming tools
     diff-hl
     minimap
     skewer-mode
-    ;;Color themes
+    ;; Color themes
     material-theme
     hemisu-theme
     green-phosphor-theme
     overcast-theme
-    ;;Visual tweaks
+    ;; Visual tweaks
     telephone-line
     fira-code-mode
-    ;;myTerminal's packages
     theme-looper))
 
 (mapc (lambda (p)

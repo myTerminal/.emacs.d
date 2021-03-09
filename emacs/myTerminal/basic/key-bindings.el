@@ -1,9 +1,9 @@
 (defvar mt/keyboard-bindings-basic
-  '(;;Zoning
+  '(;; Zoning
     ("C-c `" . zone)
     ("C-c ~" . mt/set-zoning)
     ("C-c !" . zone-leave-me-alone)
-    ;;Buffer/Window management
+    ;; Buffer/Window management
     ("C-x C-b" . ibuffer)
     ("C-x b" . ivy-switch-buffer)
     ("C-x C-f" . counsel-find-file)
@@ -15,7 +15,7 @@
     ("C-S-<right>" . buf-move-right)
     ("C-c %" . window-shaper-mode)
     ("C-c ;" . ace-window)
-    ;;Text-editing
+    ;; Text-editing
     ("C-}" . mc/mark-next-like-this)
     ("C-{" . mc/mark-previous-like-this)
     ("C-|" . mc/mark-all-like-this)
@@ -28,7 +28,7 @@
     ("C-<backspace>" . mt/delete-word-backward)
     ("C-c s" . swiper)
     ("C-c ^" . mt/reload-current-file)
-    ;;Navigation
+    ;; Navigation
     ("C-c j" . avy-goto-char-timer)
     ("C-c k" . avy-goto-word-1)
     ("C-c l" . avy-goto-line)
@@ -39,7 +39,7 @@
     ("C-c C-p s f" . projectile-find-all-references)
     ("M-\\" . wg-reload-session)
     ("C-\\" . wg-switch-to-previous-workgroup)
-    ;;Misc
+    ;; Misc
     ("C-c ." . term)
     ("M-x" . counsel-M-x)
     ("C-=" . mt/eval-and-replace)

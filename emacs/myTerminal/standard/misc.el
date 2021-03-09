@@ -1,4 +1,4 @@
-;;Interface
+;; Interface
 (setq frame-title-format
       "%b - emacs")
 (setq use-dialog-box

@@ -1,8 +1,8 @@
-;;Record startup timestamp
+;; Record startup timestamp
 (defvar mt/invokation-time
   (current-time))
 
-;;Define base-path
+;; Define base-path
 (defvar mt/base-path
   (file-name-directory load-file-name))
 
@@ -15,5 +15,5 @@
                 "-custom")
         t))
 
-;;Load lib.el
+;; Load lib.el
 (mt/load-file "lib")

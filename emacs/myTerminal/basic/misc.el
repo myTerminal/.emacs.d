@@ -1,4 +1,4 @@
-;;System
+;; System
 (if (eq system-type
         'darwin)
     (progn
@@ -7,29 +7,29 @@
       (add-to-list 'exec-path
                    "~/.cargo/bin")))
 
-;;User
+;; User
 (setq user-full-name
       "Mohammed Ismail Ansari")
 (setq user-mail-address
       "team.terminal@gmail.com")
 
-;;Backup
+;; Backup
 (setq backup-inhibited
       t)
 (setq auto-save-default
       nil)
 
-;;Startup
+;; Startup
 (setq initial-buffer-choice
       t)
 (setq initial-scratch-message
       "Welcome myTerminal!\n\n")
 
-;;Interface
+;; Interface
 (menu-bar-mode 0)
 (display-battery-mode)
 
-;;Text editing
+;; Text editing
 (column-number-mode)
 (electric-pair-mode)
 (show-paren-mode)
@@ -45,7 +45,7 @@
       t)
 (prefer-coding-system 'utf-8-unix)
 
-;;Spell-check
+;; Spell-check
 (let ((path-to-aspell (locate-file "aspell"
                                    exec-path
                                    exec-suffixes
@@ -56,7 +56,7 @@
       (setq ispell-program-name "aspell")
       (setq ispell-extra-args '("--sug-mode=ultra" "--lang=en_US")))))
 
-;;Package archives and 'customize'
+;; Package archives and 'customize'
 (setq custom-file
       (concat mt/config-root
 		      "custom.el"))
@@ -71,7 +71,7 @@
              t)
 (package-initialize)
 
-;;Misc
+;; Misc
 (winner-mode t)
 (windmove-default-keybindings)
 (require 'zone)

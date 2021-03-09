@@ -1,7 +1,7 @@
 (defvar mt/keyboard-bindings-standard
-  '(;;Swanking
+  '(;; Swanking
     ("C-c &" . sublimity-mode)
-    ;;Misc
+    ;; Misc
     ("C-c )" . theme-looper-enable-next-theme)
     ("C-c (" . theme-looper-enable-previous-theme)))
 
