@@ -1,46 +1,20 @@
 (defvar mt/keyboard-bindings-basic
-  '(;; Zoning
-    ("C-c ~" . mt/set-zoning)
-    ("C-c !" . zone-leave-me-alone)
+  '(
     ;; Buffer/Window management
     ("C-x C-b" . ibuffer)
     ("C-x b" . ivy-switch-buffer)
     ("C-x C-f" . counsel-find-file)
     ("C-x C-r" . counsel-recentf)
-    ("C-c @" . mt/window-toggle-split-direction)
-    ("C-S-<up>" . buf-move-up)
-    ("C-S-<down>" . buf-move-down)
-    ("C-S-<left>" . buf-move-left)
-    ("C-S-<right>" . buf-move-right)
-    ("C-c %" . window-shaper-mode)
-    ("C-c ;" . ace-window)
     ;; Text-editing
     ("C-}" . mc/mark-next-like-this)
     ("C-{" . mc/mark-previous-like-this)
     ("C-|" . mc/mark-all-like-this)
-    ("C-c #" . display-line-numbers-mode)
-    ("C-c _" . outer-spaces-mode)
-    ("M-/" . undo-tree-visualize)
     ("M-y" . counsel-yank-pop)
     ("M-<down>" . mt/move-line-down)
     ("M-<up>" . mt/move-line-up)
     ("C-<backspace>" . mt/delete-word-backward)
     ("C-c s" . swiper)
-    ("C-c ^" . mt/reload-current-file)
-    ;; Navigation
-    ("C-c j" . avy-goto-char-timer)
-    ("C-c k" . avy-goto-word-1)
-    ("C-c l" . avy-goto-line)
-    ("C-c /" . neotree-toggle)
-    ("C-'" . dumb-jump-go)
-    ("C-\"" . dumb-jump-back)
-    ("C-c C-p s o" . projectile-find-all-occurrences)
-    ("C-c C-p s f" . projectile-find-all-references)
-    ("M-\\" . wg-reload-session)
-    ("C-\\" . wg-switch-to-previous-workgroup)
     ;; Misc
-    ("C-c ." . term)
-    ("C-." . emacs-home-show)
     ("C-=" . mt/eval-and-replace)
     ("M-x" . counsel-M-x)))
 
@@ -60,3 +34,70 @@
 (define-key prog-mode-map
   (kbd "C-c t")
   'quickrun-replace-region)
+
+;;; Hydras
+
+(defhydra mt/hydra-toggles (:color pink)
+  "
+_l_ line-numbers:  %`display-line-numbers-mode
+_SPC_ outer-spaces:  %`outer-spaces-mode
+
+"
+  ("l" display-line-numbers-mode nil)
+  ("SPC" outer-spaces-mode nil)
+  ("q" nil "Cancel"))
+
+(defhydra mt/hydra-tools (:color blue)
+  "Tools"
+  ;; Zoning
+  ("z" mt/set-zoning "Enable zoning")
+  ("x" zone-leave-me-alone "Disable zoning")
+  ;; Misc
+  ("\\" neotree-toggle "neotree")
+  ("/" term "Terminal")
+  ("." emacs-home-show "emacs-home")
+  ("%" window-shaper-mode "Resize windows")
+  ("q" nil "Cancel"))
+
+(defhydra mt/hydra-editing (:color blue)
+  "Text"
+  ;; Programming
+  ("'" dumb-jump-go "Go to definition")
+  ("\"" dumb-jump-back "Back from definition")
+  ;; Jumping
+  ("k" avy-goto-char-timer "Jump to char")
+  ("j" avy-goto-word-1 "Jump to word")
+  ("l" avy-goto-line "Jump to line")
+  ;; Searching
+  ("s" projectile-find-all-occurrences "Search for occurrences")
+  ("r" projectile-find-all-references "Search for references")
+  ;; Misc
+  ("/" undo-tree-visualize "Undo tree")
+  ("^" mt/reload-current-file "Reload file")
+  ("q" nil "Cancel"))
+
+(defhydra mt/hydra-windows ()
+  "Buffers and Windows"
+  ;; Moving
+  ("<up>" windmove-up "^")
+  ("<down>" windmove-down "v")
+  ("<left>" windmove-left "<")
+  ("<right>" windmove-right ">")
+  ("S-<up>" buf-move-up "Move up")
+  ("S-<down>" buf-move-down "Move down")
+  ("S-<left>" buf-move-left "Move left")
+  ("S-<right>" buf-move-right "Move right")
+  ;; Arranging
+  ("+" mt/window-toggle-split-direction "Horizontal<>Vertical")
+  ;; Jumping
+  ("\\" ace-window "Jump to window" :color blue)
+  ;; Workspaces
+  ("M-\\" wg-reload-session "Restore workspaces" :color blue)
+  ("C-\\" wg-switch-to-previous-workgroup "Switch workspace" :color blue)
+  ;; Misc
+  ("q" nil "Cancel"))
+
+(global-set-key (kbd "C-`") 'mt/hydra-toggles/body)
+(global-set-key (kbd "C-<") 'mt/hydra-tools/body)
+(global-set-key (kbd "C->") 'mt/hydra-editing/body)
+(global-set-key (kbd "C-|") 'mt/hydra-windows/body)
