@@ -7,7 +7,6 @@
 !/emacs/myTerminal
 /emacs/myTerminal/basic/*-custom.el
 /emacs/myTerminal/standard/*-custom.el
-!/emacs/sounds
 !/emacs/init.el
 
 !/LICENSE

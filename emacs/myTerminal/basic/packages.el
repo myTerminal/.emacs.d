@@ -60,18 +60,10 @@
 (setq quelpa-update-melpa-p
       nil)
 
-(quelpa '(prompt-you :fetcher github
-                     :repo "myTerminal/prompt-you"))
 (quelpa '(emacs-visual-notifications :fetcher github
                                      :repo "myTerminal/emacs-visual-notifications"))
-(quelpa '(eagle-eye :fetcher github
-                    :repo "myTerminal/eagle-eye"))
 (quelpa '(outer-spaces :fetcher github
                        :repo "myTerminal/outer-spaces"))
-(quelpa '(emacs-sounds :fetcher github
-                       :repo "myTerminal/emacs-sounds"))
-(quelpa '(emacs-profiles :fetcher github
-                         :repo "myTerminal/emacs-profiles"))
 (quelpa '(emacs-daily-events :fetcher github
                              :repo "myTerminal/emacs-daily-events"))
 (quelpa '(emacs-home :fetcher github
@@ -80,8 +72,6 @@
                       :repo "myTerminal/zone-quotes"))
 (quelpa '(zone-tunnels :fetcher github
                        :repo "myTerminal/zone-tunnels"))
-(quelpa '(emacs-new-buffer :fetcher github
-                           :repo "myTerminal/emacs-new-buffer"))
 (quelpa '(window-shaper :fetcher github
                         :repo "myTerminal/window-shaper"))
 (quelpa '(projectile-extras :fetcher github
@@ -159,16 +149,6 @@
 (setq projectile-completion-system
       'ivy)
 (counsel-projectile-mode)
-
-(setq emacs-sounds-bell-sound
-      (concat mt/config-root
-              "sounds/bell.wav"))
-(setq emacs-sounds-find-file-sound
-      (concat mt/config-root
-              "sounds/file-change.wav"))
-(setq emacs-sounds-window-change-sound
-      (concat mt/config-root
-              "sounds/window-change.wav"))
 
 (emacs-daily-events-global-mode)
 

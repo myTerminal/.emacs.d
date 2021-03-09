@@ -21,7 +21,6 @@
     ("C-|" . mc/mark-all-like-this)
     ("C-c #" . display-line-numbers-mode)
     ("C-c _" . outer-spaces-mode)
-    ("C-c *" . eagle-eye-mode)
     ("M-/" . undo-tree-visualize)
     ("M-y" . counsel-yank-pop)
     ("M-<down>" . mt/move-line-down)
