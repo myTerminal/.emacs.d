@@ -45,8 +45,6 @@
     ;;Networking tools
     mew
     jabber
-    ;;myTerminal's packages
-    meta-presenter
     ;;Misc
     delight
     golden-ratio
