@@ -8,7 +8,7 @@
     ;; Text-editing
     ("C-}" . mc/mark-next-like-this)
     ("C-{" . mc/mark-previous-like-this)
-    ("C-|" . mc/mark-all-like-this)
+    ("C-\"" . mc/mark-all-like-this)
     ("M-y" . counsel-yank-pop)
     ("M-<down>" . mt/move-line-down)
     ("M-<up>" . mt/move-line-up)
