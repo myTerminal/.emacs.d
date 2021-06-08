@@ -82,6 +82,8 @@
 
 (global-anzu-mode +1)
 
+(setq yas-snippet-dirs (list (concat mt/base-path
+                                     "snippets")))
 (yas-global-mode 1)
 (add-hook 'yas-minor-mode
           (lambda ()
