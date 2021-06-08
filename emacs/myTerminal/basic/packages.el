@@ -8,6 +8,7 @@
     undo-tree
     rainbow-mode
     anzu
+    yasnippet
     ;; Navigation
     dumb-jump
     avy
@@ -80,6 +81,11 @@
 (global-undo-tree-mode)
 
 (global-anzu-mode +1)
+
+(yas-global-mode 1)
+(add-hook 'yas-minor-mode
+          (lambda ()
+            (yas-activate-extra-mode 'fundamental-mode)))
 
 (dumb-jump-mode)
 
