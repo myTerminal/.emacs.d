@@ -55,6 +55,7 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
   ;; Misc
   ("\\" neotree-toggle "neotree")
   ("/" term "Terminal")
+  ("i" mt/prompt-to-connect-to-irc "Connect to IRC")
   ("." emacs-home-show "emacs-home")
   ("%" window-shaper-mode "Resize windows")
   ("q" nil "Cancel"))
