@@ -69,6 +69,49 @@
                                  (message "File reloaded")))
         (t (message "You're not editing a file!"))))
 
+(defun mt/ask-for-password (password)
+  "Prompts user for a password."
+  (interactive "sEnter the password: ")
+  password)
+
+(defun mt/connect-to-irc (connection)
+  "Connects to the supplied IRC server using an entered password."
+  (let ((password (call-interactively 'mt/ask-for-password)))
+        (funcall connection password)))
+
+(defun mt/get-configured-irc-connections ()
+  "Returns a collection of configured IRC connections in form of a hashmap"
+  #s(hash-table
+     size 3
+     test equal
+     data (
+           "LiberaChat" (lambda (password)
+                          (erc-tls :server "irc.libera.chat"
+                                   :port 6697
+                                   :nick "myTerminal"
+                                   :full-name "Mohammed Ismail Ansari"
+                                   :password password))
+           "Freenode" (lambda (password)
+                        (erc-tls :server "irc.freenode.net"
+                                 :port 6697
+                                 :nick "myTerminal"
+                                 :full-name "Mohammed Ismail Ansari"
+                                 :password password)))))
+
+(defun mt/prompt-to-connect-to-irc ()
+  "Prompts with a list of ERC connections and then connects to the chosen one."
+  (interactive)
+  (if (featurep 'ivy)
+      (let* ((ivy-wrap t)
+             (connections (mt/get-configured-irc-connections)))
+        (ivy-read "Choose an IRC server: "
+                  (hash-table-keys connections)
+                  :action (lambda (server)
+                            (let ((connection (gethash server connections)))
+                              (if connection
+                                  (mt/connect-to-irc connection)
+                                (message "Please specify a valid server!"))))))))
+
 ;; Credit: https://github.com/jonathanj
 (defun mt/window-toggle-split-direction ()
   "Switches window split from horizontally to vertically, or vice versa."
