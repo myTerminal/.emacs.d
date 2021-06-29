@@ -98,7 +98,7 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
   ;; Misc
   ("q" nil "Cancel"))
 
-(global-set-key (kbd "C-`") 'mt/hydra-toggles/body)
+(global-set-key (kbd "C-~") 'mt/hydra-toggles/body)
 (global-set-key (kbd "C-<") 'mt/hydra-tools/body)
 (global-set-key (kbd "C->") 'mt/hydra-editing/body)
 (global-set-key (kbd "C-|") 'mt/hydra-windows/body)
