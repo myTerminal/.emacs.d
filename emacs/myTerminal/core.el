@@ -7,7 +7,7 @@
   (file-name-directory load-file-name))
 
 (defun mt/load-file (file-path)
-  "Loads the specified file and also it's customized version, if it exists"
+  "Loads the specified file and also it's customized version, if it exists."
   (load (concat mt/base-path
                 file-path))
   (load (concat mt/base-path

@@ -1,5 +1,5 @@
 (defun mt/print-welcome-message ()
-  "Prints a welcome message with date and startup time"
+  "Prints a welcome message with date and startup time."
   (princ (concat "Welcome myTerminal!"
                  "\n\n"
                  "Today's "
@@ -13,7 +13,7 @@
          (get-buffer-create (current-buffer))))
 
 (defun mt/assign-function-to-keys (pair)
-  "Applies keyboard-bindings for supplied list of key-pair values"
+  "Applies keyboard-bindings for supplied list of key-pair values."
   (global-set-key (kbd (car pair))
                   (cdr pair)))
 
@@ -77,10 +77,10 @@
 (defun mt/connect-to-irc (connection)
   "Connects to the supplied IRC server using an entered password."
   (let ((password (call-interactively 'mt/ask-for-password)))
-        (funcall connection password)))
+    (funcall connection password)))
 
 (defun mt/get-configured-irc-connections ()
-  "Returns a collection of configured IRC connections in form of a hashmap"
+  "Returns a collection of configured IRC connections in form of a hashmap."
   #s(hash-table
      size 3
      test equal
