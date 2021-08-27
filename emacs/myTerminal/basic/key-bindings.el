@@ -53,11 +53,11 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
   ("z" mt/set-zoning "Enable zoning")
   ("x" zone-leave-me-alone "Disable zoning")
   ;; Misc
-  ("\\" neotree-toggle "neotree")
+  ("." neotree-toggle "neotree")
   ("/" term "Terminal")
   ("i" mt/prompt-to-connect-to-irc "Connect to IRC")
-  ("." emacs-home-show "emacs-home")
-  ("%" window-shaper-mode "Resize windows")
+  ("h" emacs-home-show "emacs-home")
+  ("r" window-shaper-mode "Resize windows")
   ("q" nil "Cancel"))
 
 (defhydra mt/hydra-editing (:color blue)
