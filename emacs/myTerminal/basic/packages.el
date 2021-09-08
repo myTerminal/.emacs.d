@@ -41,7 +41,6 @@
     ;; Super-powers
     which-key
     counsel
-    counsel-projectile
     ivy-hydra
     ;; Networking tools
     mew
@@ -61,6 +60,8 @@
 (setq quelpa-update-melpa-p
       nil)
 
+(quelpa '(counsel-projectile :fetcher github
+                             :repo "ericdanan/counsel-projectile"))
 (quelpa '(emacs-visual-notifications :fetcher github
                                      :repo "myTerminal/emacs-visual-notifications"))
 (quelpa '(outer-spaces :fetcher github
