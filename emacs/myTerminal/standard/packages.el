@@ -20,8 +20,10 @@
     fira-code-mode
     theme-looper))
 
-(quelpa '(eagle-eye :fetcher github
-                    :repo "myTerminal/eagle-eye"))
+(mapc 'mt/install-package-with-quelpa
+      '(
+        (eagle-eye github "myTerminal/eagle-eye" nil)
+        ))
 
 (mapc (lambda (p)
         (unless (package-installed-p p)

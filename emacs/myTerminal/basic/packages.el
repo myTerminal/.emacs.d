@@ -59,24 +59,18 @@
 (setq quelpa-update-melpa-p
       nil)
 
-(quelpa '(counsel-projectile :fetcher github
-                             :repo "ericdanan/counsel-projectile"))
-(quelpa '(emacs-visual-notifications :fetcher github
-                                     :repo "myTerminal/emacs-visual-notifications"))
-(quelpa '(outer-spaces :fetcher github
-                       :repo "myTerminal/outer-spaces"))
-(quelpa '(emacs-daily-events :fetcher github
-                             :repo "myTerminal/emacs-daily-events"))
-(quelpa '(emacs-home :fetcher github
-                     :repo "myTerminal/emacs-home"))
-(quelpa '(zone-quotes :fetcher github
-                      :repo "myTerminal/zone-quotes"))
-(quelpa '(zone-tunnels :fetcher github
-                       :repo "myTerminal/zone-tunnels"))
-(quelpa '(window-shaper :fetcher github
-                        :repo "myTerminal/window-shaper"))
-(quelpa '(projectile-extras :fetcher github
-                            :repo "myTerminal/projectile-extras"))
+(mapc 'mt/install-package-with-quelpa
+      '(
+        (counsel-projectile github "ericdanan/counsel-projectile" nil)
+        (emacs-visual-notifications github "myTerminal/emacs-visual-notifications" nil)
+        (outer-spaces github "myTerminal/outer-spaces" nil)
+        (emacs-daily-events github "myTerminal/emacs-daily-events" nil)
+        (emacs-home github "myTerminal/emacs-home" nil)
+        (zone-quotes github "myTerminal/zone-quotes" nil)
+        (zone-tunnels github "myTerminal/zone-tunnels" nil)
+        (window-shaper github "myTerminal/window-shaper" nil)
+        (projectile-extras github "myTerminal/projectile-extras" nil)
+        ))
 
 (global-undo-tree-mode)
 

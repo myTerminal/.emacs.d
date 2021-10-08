@@ -12,6 +12,13 @@
                  " seconds)")
          (get-buffer-create (current-buffer))))
 
+(defun mt/install-package-with-quelpa (p)
+  "Installs the supplied package with quelpa"
+  (quelpa `(,(car p)
+            :fetcher ,(cadr p)
+            :repo ,(caddr p)
+            :stable ,(cadddr p))))
+
 (defun mt/assign-function-to-keys (pair)
   "Applies keyboard-bindings for supplied list of key-pair values."
   (global-set-key (kbd (car pair))
