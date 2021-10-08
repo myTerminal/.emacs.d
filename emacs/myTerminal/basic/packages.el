@@ -49,7 +49,6 @@
     delight
     golden-ratio
     volume
-    quelpa
     marmalade-client))
 
 (mapc (lambda (p)
