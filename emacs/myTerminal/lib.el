@@ -15,10 +15,16 @@
 (defun mt/install-package-with-quelpa (p)
   "Installs the supplied package with quelpa, if not already installed"
   (unless (package-installed-p (car p))
-    (quelpa `(,(car p)
-              :fetcher ,(cadr p)
-              :repo ,(caddr p)
-              :stable ,(cadddr p)))))
+    (cond ((eq (cadr p) 'melpa) (quelpa (car p)
+                                        :stable (cadddr p)))
+          ((eq (cadr p) 'github) (quelpa `(,(car p)
+                                           :fetcher ,(cadr p)
+                                           :repo ,(caddr p)
+                                           :stable ,(cadddr p))))
+          (t (quelpa `(,(car p)
+                       :fetcher ,(cadr p)
+                       :url ,(caddr p)
+                       :stable ,(cadddr p)))))))
 
 (defun mt/assign-function-to-keys (pair)
   "Applies keyboard-bindings for supplied list of key-pair values."
