@@ -1,76 +1,68 @@
-(when (not package-archive-contents)
-  (package-refresh-contents))
-
 (defvar mt/packages-basic
   '(;; Text-editing
-    multiple-cursors
-    company
-    undo-tree
-    rainbow-mode
-    anzu
-    yasnippet
+    (multiple-cursors melpa "magnars/multiple-cursors.el" t)
+    (company-mode melpa "company-mode/company-mode" t)
+    (undo-tree-0.7.5 url "https://elpa.gnu.org/packages/undo-tree-0.7.5.el" t)
+    (rainbow-mode-1.0.5 url "https://elpa.gnu.org/packages/rainbow-mode-1.0.5.el" t)
+    (anzu melpa "emacsorphanage/anzu" t)
+    (yasnippet melpa "joaotavora/yasnippet" t)
+    (outer-spaces github "myTerminal/outer-spaces" nil)
     ;; Navigation
-    dumb-jump
-    avy
-    ace-window
-    workgroups2
-    buffer-move
-    ibuffer-vc
+    (dumb-jump melpa "jacktasia/dumb-jump" t)
+    (avy melpa "abo-abo/avy" t)
+    (ace-window melpa "abo-abo/ace-window" t)
+    (workgroups2 melpa "pashinin/workgroups2" t)
+    (buffer-move melpa "lukhas/buffer-move" t)
+    (ibuffer-vc melpa "purcell/ibuffer-vc" t)
+    (window-shaper github "myTerminal/window-shaper" nil)
     ;; Language modes
-    markdown-mode
-    web-mode
-    js2-mode
-    less-css-mode
-    scss-mode
-    sass-mode
-    yaml-mode
-    vue-mode
-    typescript-mode
-    rust-mode
-    csharp-mode
+    (markdown-mode melpa "jrblevin/markdown-mode" t)
+    (web-mode melpa "fxbois/web-mode" t)
+    (js2-mode melpa "mooz/js2-mode" t)
+    (less-css-mode melpa "purcell/less-css-mode" t)
+    (scss-mode melpa "antonj/scss-mode" t)
+    (sass-mode melpa "nex3/sass-mode" t)
+    (yaml-mode melpa "yoshiki/yaml-mode" t)
+    (vue-mode melpa "AdamNiederer/vue-mode" t)
+    (typescript-mode melpa "emacs-typescript/typescript.el" t)
+    (rust-mode melpa "rust-lang/rust-mode" t)
+    (csharp-mode melpa "emacs-csharp/csharp-mode" t)
     ;; Programming tools
-    projectile
-    column-enforce-mode
-    magit
-    quickrun
-    restclient
+    (projectile melpa "bbatsov/projectile" t)
+    (counsel-projectile melpa "ericdanan/counsel-projectile" t)
+    (projectile-extras github "myTerminal/projectile-extras" nil)
+    (column-enforce-mode melpa "jordonbiondo/column-enforce-mode" nil)
+    (magit melpa "magit/magit" t)
+    (quickrun melpa "emacsorphanage/quickrun" t)
+    (restclient melpa "pashky/restclient.el")
     ;; File-system
-    ranger
-    neotree
-    ztree
+    (ranger melpa "ralesi/ranger" t)
+    (neotree melpa "jaypei/emacs-neotree" t)
+    (ztree melpa "fourier/ztree" nil)
     ;; Super-powers
-    which-key
-    counsel
-    ivy-hydra
+    (which-key melpa "justbur/emacs-which-key" t)
+    (counsel melpa "abo-abo/swiper" t)
+    (hydra melpa "abo-abo/hydra" t)
     ;; Networking tools
-    mew
-    jabber
+    (mew melpa "kazu-yamamoto/Mew" t)
+    (jabber melpa "legoscia/emacs-jabber" nil)
     ;; Misc
-    delight
-    golden-ratio
-    volume
-    marmalade-client))
+    (delight-1.7 url "https://elpa.gnu.org/packages/delight-1.7.el" t)
+    (golden-ratio melpa "roman/golden-ratio.el" t)
+    (volume melpa "dbrock/volume.el" nil)
+    (emacs-visual-notifications github "myTerminal/emacs-visual-notifications" nil)
+    (emacs-daily-events github "myTerminal/emacs-daily-events" nil)
+    (emacs-home github "myTerminal/emacs-home" nil)
+    (zone-quotes github "myTerminal/zone-quotes" nil)
+    (zone-tunnels github "myTerminal/zone-tunnels" nil)
+    (marmalade-client github "nicferrier/emacs-marmalade-upload" nil)
+    ))
 
-(mapc (lambda (p)
-        (unless (package-installed-p p)
-          (package-install p)))
+(mapc 'mt/install-package-with-quelpa
       mt/packages-basic)
 
 (setq quelpa-update-melpa-p
       nil)
-
-(mapc 'mt/install-package-with-quelpa
-      '(
-        (counsel-projectile github "ericdanan/counsel-projectile" nil)
-        (emacs-visual-notifications github "myTerminal/emacs-visual-notifications" nil)
-        (outer-spaces github "myTerminal/outer-spaces" nil)
-        (emacs-daily-events github "myTerminal/emacs-daily-events" nil)
-        (emacs-home github "myTerminal/emacs-home" nil)
-        (zone-quotes github "myTerminal/zone-quotes" nil)
-        (zone-tunnels github "myTerminal/zone-tunnels" nil)
-        (window-shaper github "myTerminal/window-shaper" nil)
-        (projectile-extras github "myTerminal/projectile-extras" nil)
-        ))
 
 (global-undo-tree-mode)
 

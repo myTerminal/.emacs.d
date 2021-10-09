@@ -1,33 +1,25 @@
-(when (not package-archive-contents)
-  (package-refresh-contents))
-
 (defvar mt/packages-standard
   '(;; Text-editing
-    sublimity
+    (sublimity melpa "zk-phi/sublimity" t)
+    (minimap-1.4 url "https://elpa.gnu.org/packages/minimap-1.4.el" t)
+    (eagle-eye github "myTerminal/eagle-eye" nil)
     ;; Language modes
-    latex-preview-pane
+    (latex-preview-pane melpa "jsinglet/latex-preview-pane" nil)
     ;; Programming tools
-    diff-hl
-    minimap
-    skewer-mode
+    (diff-hl melpa "dgutov/diff-hl" t)
+    (skewer-mode melpa "skeeto/skewer-mode" t)
     ;; Color themes
-    material-theme
-    hemisu-theme
-    green-phosphor-theme
-    overcast-theme
+    (material-theme melpa "cpaulik/emacs-material-theme" t)
+    (hemisu-theme melpa "andrzejsliwa/hemisu-theme" nil)
+    (green-phosphor-theme melpa "aalpern/emacs-color-theme-green-phosphor" nil)
+    (overcast-theme melpa "myTerminal/overcast-theme" nil)
     ;; Visual tweaks
-    telephone-line
-    fira-code-mode
-    theme-looper))
+    (telephone-line melpa "dbordak/telephone-line" t)
+    (fira-code-mode melpa "jming422/fira-code-mode" nil)
+    (theme-looper melpa "myTerminal/theme-looper" nil)
+    ))
 
 (mapc 'mt/install-package-with-quelpa
-      '(
-        (eagle-eye github "myTerminal/eagle-eye" nil)
-        ))
-
-(mapc (lambda (p)
-        (unless (package-installed-p p)
-          (package-install p)))
       mt/packages-standard)
 
 (require 'sublimity-scroll)
