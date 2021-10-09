@@ -1,7 +1,7 @@
 (defvar mt/packages-basic
   '(;; Text-editing
     (multiple-cursors melpa "magnars/multiple-cursors.el" t)
-    (company-mode melpa "company-mode/company-mode" t)
+    (company melpa "company-mode/company-mode" t)
     (undo-tree-0.7.5 url "https://elpa.gnu.org/packages/undo-tree-0.7.5.el" t)
     (rainbow-mode-1.0.5 url "https://elpa.gnu.org/packages/rainbow-mode-1.0.5.el" t)
     (anzu melpa "emacsorphanage/anzu" t)
