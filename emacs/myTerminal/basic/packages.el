@@ -45,7 +45,6 @@
     (hydra melpa "abo-abo/hydra" t)
     ;; Networking tools
     (mew melpa "kazu-yamamoto/Mew" t)
-    (jabber melpa "legoscia/emacs-jabber" nil)
     ;; Misc
     (delight-1.7 url "https://elpa.gnu.org/packages/delight-1.7.el" t)
     (golden-ratio melpa "roman/golden-ratio.el" t)
