@@ -10,3 +10,7 @@
 (set-face-attribute 'mode-line
                     nil
                     :box nil)
+(setq org-pretty-entities t
+      org-hide-emphasis-markers t
+      org-startup-with-inline-images t
+      org-image-actual-width '(640))

@@ -89,6 +89,6 @@
       [zone-pgm-quotes])
 (setq org-todo-keywords
       '((sequence "DEFERRED(r)" "TODO(t)" "BLOCKED(b)" "IN-PROGRESS(p)" "|"
-                  "ALMOST-THERE(a)" "DONE(d)" "CANCELLED(c)" "DELEGATED(g)")))
-(setq org-cycle-separator-lines
-      1)
+                  "ALMOST-THERE(a)" "DONE(d)" "CANCELLED(c)" "DELEGATED(g)"))
+      org-startup-indented t
+      org-cycle-separator-lines 1)
