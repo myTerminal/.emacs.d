@@ -36,6 +36,7 @@
     (quickrun melpa "emacsorphanage/quickrun" t)
     (restclient melpa "pashky/restclient.el")
     ;; File-system
+    (dired-subtree melpa "Fuco1/dired-hacks" nil)
     (ranger melpa "ralesi/ranger" t)
     (neotree melpa "jaypei/emacs-neotree" t)
     (ztree melpa "fourier/ztree" nil)

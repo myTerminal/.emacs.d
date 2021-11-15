@@ -21,10 +21,39 @@
 (mapc 'mt/assign-function-to-keys
       mt/keyboard-bindings-basic)
 
-;; Map-specific key-bindings
+;; Custom key-bindings for dired
 (define-key dired-mode-map
-  (kbd "C-c |")
-  'wdired-change-to-wdired-mode)
+  (kbd "<tab>")
+  'dired-subtree-toggle)
+(define-key dired-mode-map
+  (kbd "<backtab>")
+  'dired-subtree-cycle)
+(define-key dired-mode-map
+  (kbd "C-<up>")
+  'dired-subtree-beginning)
+(define-key dired-mode-map
+  (kbd "C-<down>")
+  'dired-subtree-end)
+(define-key dired-mode-map
+  (kbd "C-<left>")
+  'dired-subtree-up)
+(define-key dired-mode-map
+  (kbd "C-<right>")
+  'dired-subtree-down)
+(define-key dired-mode-map
+  (kbd "M-<up>")
+  'dired-subtree-previous-sibling)
+(define-key dired-mode-map
+  (kbd "M-<down>")
+  'dired-subtree-next-sibling)
+(define-key dired-mode-map
+  (kbd "M-<right>")
+  'dired-subtree-mark-subtree)
+(define-key dired-mode-map
+  (kbd "M-<left>")
+  'dired-subtree-unmark-subtree)
+
+;; Other mode-specific key-bindings
 (define-key prog-mode-map
   (kbd "C-c e")
   'quickrun)
