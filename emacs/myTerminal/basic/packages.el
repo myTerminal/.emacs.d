@@ -37,6 +37,7 @@
     (restclient melpa "pashky/restclient.el")
     ;; File-system
     (dired-subtree melpa "Fuco1/dired-hacks" nil)
+    (dired-ranger melpa "Fuco1/dired-ranger" nil)
     (ranger melpa "ralesi/ranger" t)
     (neotree melpa "jaypei/emacs-neotree" t)
     (ztree melpa "fourier/ztree" nil)

@@ -52,6 +52,15 @@
 (define-key dired-mode-map
   (kbd "M-<left>")
   'dired-subtree-unmark-subtree)
+(define-key dired-mode-map
+  (kbd "M-c")
+  'dired-ranger-copy)
+(define-key dired-mode-map
+  (kbd "M-m")
+  'dired-ranger-move)
+(define-key dired-mode-map
+  (kbd "M-v")
+  'dired-ranger-paste)
 
 ;; Other mode-specific key-bindings
 (define-key prog-mode-map
