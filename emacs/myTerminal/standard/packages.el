@@ -1,22 +1,22 @@
 (defvar mt/packages-standard
   '(;; Text-editing
-    (sublimity melpa "zk-phi/sublimity" t)
+    (sublimity github "zk-phi/sublimity" t)
     (minimap-1.4 url "https://elpa.gnu.org/packages/minimap-1.4.el" t)
     (eagle-eye github "myTerminal/eagle-eye" nil)
     ;; Language modes
-    (latex-preview-pane melpa "jsinglet/latex-preview-pane" nil)
+    (latex-preview-pane github "jsinglet/latex-preview-pane" nil)
     ;; Programming tools
-    (diff-hl melpa "dgutov/diff-hl" t)
-    (skewer-mode melpa "skeeto/skewer-mode" t)
+    (diff-hl github "dgutov/diff-hl" t)
+    (skewer-mode github "skeeto/skewer-mode" t)
     ;; Color themes
-    (material-theme melpa "cpaulik/emacs-material-theme" t)
-    (hemisu-theme melpa "andrzejsliwa/hemisu-theme" nil)
-    (green-phosphor-theme melpa "aalpern/emacs-color-theme-green-phosphor" nil)
-    (overcast-theme melpa "myTerminal/overcast-theme" nil)
+    (material-theme github "cpaulik/emacs-material-theme" t)
+    (hemisu-theme github "andrzejsliwa/hemisu-theme" nil)
+    (green-phosphor-theme github "aalpern/emacs-color-theme-green-phosphor" nil)
+    (overcast-theme github "myTerminal/overcast-theme" nil)
     ;; Visual tweaks
-    (telephone-line melpa "dbordak/telephone-line" t)
-    (fira-code-mode melpa "jming422/fira-code-mode" nil)
-    (theme-looper melpa "myTerminal/theme-looper" nil)
+    (telephone-line github "dbordak/telephone-line" t)
+    (fira-code-mode github "jming422/fira-code-mode" nil)
+    (theme-looper github "myTerminal/theme-looper" nil)
     ))
 
 (mapc 'mt/install-package-with-quelpa
