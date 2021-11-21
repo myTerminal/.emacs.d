@@ -25,6 +25,8 @@
               global-map)
 
 (mt/bind-keys '(
+                ;; dired-narrow
+                ("/" . dired-narrow-fuzzy)
                 ;; dired-subtree
                 ("<tab>" . dired-subtree-toggle)
                 ("<backtab>" . dired-subtree-cycle)

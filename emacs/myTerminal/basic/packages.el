@@ -36,6 +36,7 @@
     (quickrun github "emacsorphanage/quickrun" t)
     (restclient github "pashky/restclient.el")
     ;; File-system
+    (dired-narrow github "Fuco1/dired-hacks" nil)
     (dired-subtree github "Fuco1/dired-hacks" nil)
     (dired-ranger github "Fuco1/dired-hacks" nil)
     (ranger github "ralesi/ranger" t)
