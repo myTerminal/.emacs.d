@@ -85,6 +85,11 @@
   (kill-new text)
   (message "Formatting removed, text copied to clipboard!"))
 
+(defun mt/kill-this-buffer ()
+  "Kill the current buffer."
+  (interactive)
+  (kill-buffer (current-buffer)))
+
 (defun mt/reload-current-file ()
   "Reloads the file loaded in current buffer from the disk."
   (interactive)
