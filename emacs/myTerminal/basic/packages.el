@@ -49,7 +49,7 @@
     ;; Networking tools
     (mew github "kazu-yamamoto/Mew" t)
     ;; Misc
-    (delight-1.7 url "https://elpa.gnu.org/packages/delight-1.7.el" t)
+    (dim github "alezost/dim.el" t)
     (golden-ratio github "roman/golden-ratio.el" t)
     (volume github "dbrock/volume.el" nil)
     (emacs-visual-notifications github "myTerminal/emacs-visual-notifications" nil)
@@ -148,25 +148,14 @@
 
 (emacs-daily-events-global-mode)
 
-(delight '((anzu-mode nil
-                      anzu)
-           (undo-tree-mode nil
-                           undo-tree)
-           (company-mode nil
-                         company)
-           (which-key-mode nil
-                           which-key)
-           (workgroups-mode nil
-                            workgroups2)
-           (emacs-daily-events-global-mode " (!)"
-                                           emacs-daily-events)
-           (outer-spaces-mode " _a_"
-                              outer-spaces)
-           (flyspell-mode " Aa"
-                          flyspell)
-           (eldoc-mode nil
-                       eldoc)
-           (buffer-face-mode nil
-                             face-remap)
-           (hi-lock-mode nil
-                         hi-lock)))
+(dim-minor-names '((anzu-mode nil anzu)
+                   (undo-tree-mode nil undo-tree)
+                   (company-mode nil company)
+                   (which-key-mode nil which-key)
+                   (workgroups-mode nil workgroups2)
+                   (emacs-daily-events-global-mode " (!)" emacs-daily-events)
+                   (outer-spaces-mode " _a_" outer-spaces)
+                   (flyspell-mode " Aa" flyspell)
+                   (eldoc-mode nil eldoc)
+                   (buffer-face-mode nil face-remap)
+                   (hi-lock-mode nil hi-lock)))
