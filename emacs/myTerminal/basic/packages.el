@@ -158,4 +158,6 @@
                    (flyspell-mode " Aa" flyspell)
                    (eldoc-mode nil eldoc)
                    (buffer-face-mode nil face-remap)
-                   (hi-lock-mode nil hi-lock)))
+                   (hi-lock-mode nil hi-lock)
+                   (yas-minor-mode nil yasnippet)
+                   (ivy-mode nil ivy)))
