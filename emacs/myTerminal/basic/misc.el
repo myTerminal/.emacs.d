@@ -93,3 +93,4 @@
                   "ALMOST-THERE(a)" "DONE(d)" "CANCELLED(c)" "DELEGATED(g)"))
       org-startup-indented t
       org-cycle-separator-lines 1)
+(setq dired-listing-switches "-alh")
