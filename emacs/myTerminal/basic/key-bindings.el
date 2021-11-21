@@ -1,77 +1,50 @@
-(defvar mt/keyboard-bindings-basic
-  '(
-    ;; Buffer/Window management
-    ("C-x C-b" . ibuffer)
-    ("C-x b" . ivy-switch-buffer)
-    ("C-x C-f" . counsel-find-file)
-    ("C-x C-r" . counsel-recentf)
-    ;; Text-editing
-    ("C-}" . mc/mark-next-like-this)
-    ("C-{" . mc/mark-previous-like-this)
-    ("C-\"" . mc/mark-all-like-this)
-    ("M-y" . counsel-yank-pop)
-    ("M-<down>" . mt/move-line-down)
-    ("M-<up>" . mt/move-line-up)
-    ("C-<backspace>" . mt/delete-word-backward)
-    ("C-c s" . swiper)
-    ;; Misc
-    ("C-=" . mt/eval-and-replace)
-    ("M-x" . counsel-M-x)))
+;;; Regular key-bindings
 
-(mapc 'mt/assign-function-to-keys
-      mt/keyboard-bindings-basic)
+(mt/bind-keys '(
+                ;; Buffer/Window management
+                ("C-x C-b" . ibuffer)
+                ("C-x b" . ivy-switch-buffer)
+                ("C-x C-f" . counsel-find-file)
+                ("C-x C-r" . counsel-recentf)
+                ;; Text-editing
+                ("C-}" . mc/mark-next-like-this)
+                ("C-{" . mc/mark-previous-like-this)
+                ("C-\"" . mc/mark-all-like-this)
+                ("M-y" . counsel-yank-pop)
+                ("M-<down>" . mt/move-line-down)
+                ("M-<up>" . mt/move-line-up)
+                ("C-<backspace>" . mt/delete-word-backward)
+                ("C-c s" . swiper)
+                ;; Misc
+                ("C-=" . mt/eval-and-replace)
+                ("M-x" . counsel-M-x))
+              global-map)
 
-;; Custom key-bindings for dired
-(define-key dired-mode-map
-  (kbd "<tab>")
-  'dired-subtree-toggle)
-(define-key dired-mode-map
-  (kbd "<backtab>")
-  'dired-subtree-cycle)
-(define-key dired-mode-map
-  (kbd "C-<up>")
-  'dired-subtree-beginning)
-(define-key dired-mode-map
-  (kbd "C-<down>")
-  'dired-subtree-end)
-(define-key dired-mode-map
-  (kbd "C-<left>")
-  'dired-subtree-up)
-(define-key dired-mode-map
-  (kbd "C-<right>")
-  'dired-subtree-down)
-(define-key dired-mode-map
-  (kbd "M-<up>")
-  'dired-subtree-previous-sibling)
-(define-key dired-mode-map
-  (kbd "M-<down>")
-  'dired-subtree-next-sibling)
-(define-key dired-mode-map
-  (kbd "M-<right>")
-  'dired-subtree-mark-subtree)
-(define-key dired-mode-map
-  (kbd "M-<left>")
-  'dired-subtree-unmark-subtree)
-(define-key dired-mode-map
-  (kbd "M-c")
-  'dired-ranger-copy)
-(define-key dired-mode-map
-  (kbd "M-m")
-  'dired-ranger-move)
-(define-key dired-mode-map
-  (kbd "M-v")
-  'dired-ranger-paste)
+(mt/bind-keys '(
+                ;; dired-subtree
+                ("<tab>" . dired-subtree-toggle)
+                ("<backtab>" . dired-subtree-cycle)
+                ("<backtab>" . dired-subtree-cycle)
+                ("C-<up>" . dired-subtree-beginning)
+                ("C-<down>" . dired-subtree-end)
+                ("C-<left>" . dired-subtree-up)
+                ("C-<right>" . dired-subtree-down)
+                ("M-<up>" . dired-subtree-previous-sibling)
+                ("M-<down>" . dired-subtree-next-sibling)
+                ("M-<right>" . dired-subtree-mark-subtree)
+                ("M-<left>" . dired-subtree-unmark-subtree)
+                ;; dired-ranger
+                ("M-c" . dired-ranger-copy)
+                ("M-m" . dired-ranger-move)
+                ("M-v" . dired-ranger-paste))
+              dired-mode-map)
 
-;; Other mode-specific key-bindings
-(define-key prog-mode-map
-  (kbd "C-c e")
-  'quickrun)
-(define-key prog-mode-map
-  (kbd "C-c r")
-  'quickrun-region)
-(define-key prog-mode-map
-  (kbd "C-c t")
-  'quickrun-replace-region)
+(mt/bind-keys '(
+                ;; quickrun
+                ("C-c e" . quickrun)
+                ("C-c r" . quickrun-region)
+                ("C-c t" . quickrun-replace-region))
+              prog-mode-map)
 
 ;;; Hydras
 

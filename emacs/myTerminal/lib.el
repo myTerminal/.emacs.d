@@ -32,10 +32,13 @@
                        :url ,(caddr p)
                        :stable ,(cadddr p)))))))
 
-(defun mt/assign-function-to-keys (pair)
-  "Applies keyboard-bindings for supplied list of key-pair values."
-  (global-set-key (kbd (car pair))
-                  (cdr pair)))
+(defun mt/bind-keys (bindings keymap)
+  "Applies supplied key-bindings for a particular keymap"
+  (mapc (lambda (b)
+          (define-key keymap
+            (kbd (car b))
+            (cdr b)))
+        bindings))
 
 (defun mt/set-zoning ()
   "Sets zoning timeout"
