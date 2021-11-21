@@ -4,6 +4,7 @@
                 ;; Buffer/Window management
                 ("C-x C-b" . ibuffer)
                 ("C-x b" . ivy-switch-buffer)
+                ("C-c p" . mt/switch-to-previous-buffer)
                 ("C-c b" . ivy-push-view)
                 ("C-x C-f" . counsel-find-file)
                 ("C-x C-r" . counsel-recentf)

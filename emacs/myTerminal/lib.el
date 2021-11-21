@@ -85,6 +85,11 @@
   (kill-new text)
   (message "Formatting removed, text copied to clipboard!"))
 
+(defun mt/switch-to-previous-buffer ()
+  "Switch to most recent buffer."
+  (interactive)
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
+
 (defun mt/kill-this-buffer ()
   "Kill the current buffer."
   (interactive)
