@@ -44,6 +44,7 @@
 (setq kill-whole-line
       t)
 (prefer-coding-system 'utf-8-unix)
+(global-auto-revert-mode 1)
 
 ;; Spell-check
 (let ((path-to-aspell (locate-file "aspell"

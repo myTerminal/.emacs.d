@@ -1,6 +1,9 @@
 (add-hook 'after-init-hook
           'global-company-mode)
 
+(add-hook 'dired-mode-hook
+          'auto-revert-mode)
+
 (add-hook 'prog-mode-hook
           'display-line-numbers-mode)
 (add-hook 'prog-mode-hook
