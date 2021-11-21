@@ -8,6 +8,7 @@
                 ("C-x C-r" . counsel-recentf)
                 ("C-x k" . mt/kill-this-buffer)
                 ;; Text-editing
+                ("M-%" . anzu-query-replace)
                 ("C-}" . mc/mark-next-like-this)
                 ("C-{" . mc/mark-previous-like-this)
                 ("C-\"" . mc/mark-all-like-this)
