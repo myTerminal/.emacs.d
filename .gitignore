@@ -4,10 +4,14 @@
 
 !/emacs
 /emacs/*
-!/emacs/myTerminal
-/emacs/myTerminal/basic/*-custom.el
-/emacs/myTerminal/standard/*-custom.el
+!/emacs/modes
+/emacs/modes/standard/*-custom.el
+/emacs/modes/basic/*-custom.el
+!/emacs/snippets
+!/emacs/core.el
+!/emacs/lib.el
 !/emacs/init.el
+!/emacs/_zone-quotes-masseffect.el
 
 !/LICENSE
 !/README.md
