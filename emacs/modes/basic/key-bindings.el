@@ -110,7 +110,7 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
   ;; Jumping
   ("\\" ace-window "Jump to window" :color blue)
   ;; Workspaces
-  ("M-\\" wg-reload-session "Restore workspaces" :color blue)
+  ("/" wg-reload-session "Restore workspaces" :color blue)
   ("C-\\" wg-switch-to-previous-workgroup "Switch workspace" :color blue)
   ;; Misc
   ("q" nil "Cancel"))
