@@ -1,7 +1,6 @@
 (defvar mt/packages-standard
   '(;; Text-editing
     (sublimity github "zk-phi/sublimity" t)
-    (minimap-1.4 url "https://elpa.gnu.org/packages/minimap-1.4.el" t)
     (eagle-eye github "myTerminal/eagle-eye" nil)
     ;; Language modes
     (latex-preview-pane github "jsinglet/latex-preview-pane" nil)
