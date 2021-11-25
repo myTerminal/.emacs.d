@@ -40,7 +40,6 @@
               4)
 (set-default 'cursor-type
              'hbar)
-(setq scroll-margin 5)
 (delete-selection-mode 1)
 (setq kill-whole-line
       t)
