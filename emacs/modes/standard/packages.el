@@ -1,6 +1,5 @@
 (defvar mt/packages-standard
   '(;; Text-editing
-    (sublimity github "zk-phi/sublimity" t)
     (eagle-eye github "myTerminal/eagle-eye" nil)
     ;; Language modes
     (latex-preview-pane github "jsinglet/latex-preview-pane" nil)
@@ -20,8 +19,6 @@
 
 (mapc 'mt/install-package-with-quelpa
       mt/packages-standard)
-
-(require 'sublimity-scroll)
 
 (global-diff-hl-mode)
 

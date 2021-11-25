@@ -1,8 +1,6 @@
 ;;; Regular key-bindings
 
 (mt/bind-keys '(
-                ;; Swanking
-                ("C-c &" . sublimity-mode)
                 ;; Misc
                 ("C-c o" . eagle-eye-zoom-out)
                 ("C-c i" . eagle-eye-zoom-in)
