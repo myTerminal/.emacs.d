@@ -1,57 +1,3 @@
-;;; Regular key-bindings
-
-(mt/bind-keys '(
-                ;; Buffer/Window management
-                ("C-x C-b" . ibuffer)
-                ("C-x b" . ivy-switch-buffer)
-                ("C-c p" . mt/switch-to-previous-buffer)
-                ("C-c b" . ivy-push-view)
-                ("C-x C-f" . counsel-find-file)
-                ("C-x C-r" . counsel-recentf)
-                ("C-x k" . mt/kill-this-buffer)
-                ;; Text-editing
-                ("M-%" . anzu-query-replace)
-                ("C-}" . mc/mark-next-like-this)
-                ("C-{" . mc/mark-previous-like-this)
-                ("C-\"" . mc/mark-all-like-this)
-                ("M-y" . counsel-yank-pop)
-                ("M-<down>" . mt/move-line-down)
-                ("M-<up>" . mt/move-line-up)
-                ("C-<backspace>" . mt/delete-word-backward)
-                ("C-c s" . swiper)
-                ;; Misc
-                ("C-=" . mt/eval-and-replace)
-                ("M-x" . counsel-M-x))
-              global-map)
-
-(mt/bind-keys '(
-                ;; dired-narrow
-                ("/" . dired-narrow-fuzzy)
-                ;; dired-subtree
-                ("<tab>" . dired-subtree-toggle)
-                ("<backtab>" . dired-subtree-cycle)
-                ("<backtab>" . dired-subtree-cycle)
-                ("C-<up>" . dired-subtree-beginning)
-                ("C-<down>" . dired-subtree-end)
-                ("C-<left>" . dired-subtree-up)
-                ("C-<right>" . dired-subtree-down)
-                ("M-<up>" . dired-subtree-previous-sibling)
-                ("M-<down>" . dired-subtree-next-sibling)
-                ("M-<right>" . dired-subtree-mark-subtree)
-                ("M-<left>" . dired-subtree-unmark-subtree)
-                ;; dired-ranger
-                ("M-c" . dired-ranger-copy)
-                ("M-m" . dired-ranger-move)
-                ("M-v" . dired-ranger-paste))
-              dired-mode-map)
-
-(mt/bind-keys '(
-                ;; quickrun
-                ("C-c e" . quickrun)
-                ("C-c r" . quickrun-region)
-                ("C-c t" . quickrun-replace-region))
-              prog-mode-map)
-
 ;;; Hydras
 
 (defhydra mt/hydra-toggles (:color pink)
@@ -115,7 +61,61 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
   ;; Misc
   ("q" nil "Cancel"))
 
-(global-set-key (kbd "C-~") 'mt/hydra-toggles/body)
-(global-set-key (kbd "C-<") 'mt/hydra-tools/body)
-(global-set-key (kbd "C->") 'mt/hydra-editing/body)
-(global-set-key (kbd "C-|") 'mt/hydra-windows/body)
+;;; Regular key-bindings
+
+(mt/bind-keys '(
+                ;; Buffer/Window management
+                ("C-x C-b" . ibuffer)
+                ("C-x b" . ivy-switch-buffer)
+                ("C-c p" . mt/switch-to-previous-buffer)
+                ("C-c b" . ivy-push-view)
+                ("C-x C-f" . counsel-find-file)
+                ("C-x C-r" . counsel-recentf)
+                ("C-x k" . mt/kill-this-buffer)
+                ;; Text-editing
+                ("M-%" . anzu-query-replace)
+                ("C-}" . mc/mark-next-like-this)
+                ("C-{" . mc/mark-previous-like-this)
+                ("C-\"" . mc/mark-all-like-this)
+                ("M-y" . counsel-yank-pop)
+                ("M-<down>" . mt/move-line-down)
+                ("M-<up>" . mt/move-line-up)
+                ("C-<backspace>" . mt/delete-word-backward)
+                ("C-c s" . swiper)
+                ;; Misc
+                ("C-=" . mt/eval-and-replace)
+                ("M-x" . counsel-M-x)
+                ;; Hydras
+                ("C-~" . mt/hydra-toggles/body)
+                ("C-<" . mt/hydra-tools/body)
+                ("C->" . mt/hydra-editing/body)
+                ("C-|" . mt/hydra-windows/body))
+              global-map)
+
+(mt/bind-keys '(
+                ;; dired-narrow
+                ("/" . dired-narrow-fuzzy)
+                ;; dired-subtree
+                ("<tab>" . dired-subtree-toggle)
+                ("<backtab>" . dired-subtree-cycle)
+                ("<backtab>" . dired-subtree-cycle)
+                ("C-<up>" . dired-subtree-beginning)
+                ("C-<down>" . dired-subtree-end)
+                ("C-<left>" . dired-subtree-up)
+                ("C-<right>" . dired-subtree-down)
+                ("M-<up>" . dired-subtree-previous-sibling)
+                ("M-<down>" . dired-subtree-next-sibling)
+                ("M-<right>" . dired-subtree-mark-subtree)
+                ("M-<left>" . dired-subtree-unmark-subtree)
+                ;; dired-ranger
+                ("M-c" . dired-ranger-copy)
+                ("M-m" . dired-ranger-move)
+                ("M-v" . dired-ranger-paste))
+              dired-mode-map)
+
+(mt/bind-keys '(
+                ;; quickrun
+                ("C-c e" . quickrun)
+                ("C-c r" . quickrun-region)
+                ("C-c t" . quickrun-replace-region))
+              prog-mode-map)
