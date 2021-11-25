@@ -96,9 +96,8 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
                 ;; dired-narrow
                 ("/" . dired-narrow-fuzzy)
                 ;; dired-subtree
-                ("<tab>" . dired-subtree-toggle)
-                ("<backtab>" . dired-subtree-cycle)
-                ("<backtab>" . dired-subtree-cycle)
+                ("]" . dired-subtree-toggle)
+                ("[" . dired-subtree-cycle)
                 ("C-<up>" . dired-subtree-beginning)
                 ("C-<down>" . dired-subtree-end)
                 ("C-<left>" . dired-subtree-up)
