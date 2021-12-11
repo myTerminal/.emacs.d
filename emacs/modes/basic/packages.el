@@ -44,7 +44,7 @@
     (ztree github "fourier/ztree" nil)
     ;; Super-powers
     (which-key github "justbur/emacs-which-key" t)
-    (counsel github "abo-abo/swiper" ("counsel.el"))
+    (counsel github "abo-abo/swiper" t ("counsel.el"))
     (hydra github "abo-abo/hydra" t)
     ;; Networking tools
     (mew github "kazu-yamamoto/Mew" t)
