@@ -2,7 +2,6 @@
   '(;; Text-editing
     (multiple-cursors github "magnars/multiple-cursors.el" t)
     (company github "company-mode/company-mode" t)
-    (rainbow-mode-1.0.5 url "https://elpa.gnu.org/packages/rainbow-mode-1.0.5.el" t)
     (anzu github "emacsorphanage/anzu" t)
     (yasnippet github "joaotavora/yasnippet" t)
     (outer-spaces github "myTerminal/outer-spaces" nil)
