@@ -36,7 +36,6 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
   ("s" projectile-find-all-occurrences "Search for occurrences")
   ("r" projectile-find-all-references "Search for references")
   ;; Misc
-  ("/" undo-tree-visualize "Undo tree")
   ("^" mt/reload-current-file "Reload file")
   ("q" nil "Cancel"))
 

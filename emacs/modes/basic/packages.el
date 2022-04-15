@@ -2,7 +2,6 @@
   '(;; Text-editing
     (multiple-cursors github "magnars/multiple-cursors.el" t)
     (company github "company-mode/company-mode" t)
-    (undo-tree-0.7.5 url "https://elpa.gnu.org/packages/undo-tree-0.7.5.el" t)
     (rainbow-mode-1.0.5 url "https://elpa.gnu.org/packages/rainbow-mode-1.0.5.el" t)
     (anzu github "emacsorphanage/anzu" t)
     (yasnippet github "joaotavora/yasnippet" t)
@@ -65,8 +64,6 @@
 
 (setq quelpa-update-melpa-p
       nil)
-
-(global-undo-tree-mode)
 
 (global-anzu-mode +1)
 
@@ -149,7 +146,6 @@
 (emacs-daily-events-global-mode)
 
 (dim-minor-names '((anzu-mode nil anzu)
-                   (undo-tree-mode nil undo-tree)
                    (company-mode nil company)
                    (which-key-mode nil which-key)
                    (workgroups-mode nil workgroups2)
