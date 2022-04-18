@@ -12,7 +12,7 @@
     (green-phosphor-theme github "aalpern/emacs-color-theme-green-phosphor" nil)
     (overcast-theme github "myTerminal/overcast-theme" nil)
     ;; Visual tweaks
-    (telephone-line github "dbordak/telephone-line" t)
+    (telephone-line github "dbordak/telephone-line" nil)
     (fira-code-mode github "jming422/fira-code-mode" nil)
     (theme-looper github "myTerminal/theme-looper" nil)
     ))
