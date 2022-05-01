@@ -10,17 +10,19 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
   ("SPC" outer-spaces-mode nil)
   ("q" nil "Cancel"))
 
-(defhydra mt/hydra-tools (:color blue)
-  "Tools"
-  ;; Zoning
+(defhydra mt/hydra-misc (:color blue)
+  "Misc"
   ("z" mt/set-zoning "Enable zoning")
   ("x" zone-leave-me-alone "Disable zoning")
-  ;; Misc
+  ("r" window-shaper-mode "Resize windows")
+  ("q" nil "Cancel"))
+
+(defhydra mt/hydra-tools (:color blue)
+  "Tools"
   ("." neotree-toggle "neotree")
   ("/" term "Terminal")
   ("i" mt/prompt-to-connect-to-irc "Connect to IRC")
-  ("h" emacs-home-show "emacs-home")
-  ("r" window-shaper-mode "Resize windows")
+  ("," emacs-home-show "emacs-home")
   ("q" nil "Cancel"))
 
 (defhydra mt/hydra-editing (:color blue)
@@ -36,7 +38,7 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
   ("s" projectile-find-all-occurrences "Search for occurrences")
   ("r" projectile-find-all-references "Search for references")
   ;; Misc
-  ("^" mt/reload-current-file "Reload file")
+  ("r" mt/reload-current-file "Reload file")
   ("q" nil "Cancel"))
 
 (defhydra mt/hydra-windows ()
@@ -54,6 +56,16 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
   ("+" mt/window-toggle-split-direction "Horizontal<>Vertical")
   ;; Jumping
   ("\\" ace-window "Jump to window" :color blue)
+  ;; Misc
+  ("q" nil "Cancel"))
+
+(defhydra mt/hydra-main (:color blue)
+  "Options:"
+  ("o" mt/hydra-toggles/body "Toggles")
+  ("p" mt/hydra-misc/body "Misc")
+  ("[" mt/hydra-tools/body "Tools")
+  ("]" mt/hydra-editing/body "Editing")
+  ("\\" mt/hydra-windows/body "Windows/Buffers")
   ;; Misc
   ("q" nil "Cancel"))
 
@@ -82,10 +94,7 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
                 ("C-=" . mt/eval-and-replace)
                 ("M-x" . counsel-M-x)
                 ;; Hydras
-                ("C-~" . mt/hydra-toggles/body)
-                ("C-<" . mt/hydra-tools/body)
-                ("C->" . mt/hydra-editing/body)
-                ("C-|" . mt/hydra-windows/body))
+                ("C-\\" . mt/hydra-main/body))
               global-map)
 
 (mt/bind-keys '(
