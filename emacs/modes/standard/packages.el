@@ -24,15 +24,21 @@
 
 (require 'telephone-line)
 (setq telephone-line-lhs
-      '((evil   . (telephone-line-misc-info-segment))
-        (accent . (telephone-line-buffer-segment))
+      '((evil   . (telephone-line-hud-segment
+                   telephone-line-position-segment))
+        (accent . (telephone-line-buffer-modified-segment
+                   telephone-line-buffer-name-segment
+                   telephone-line-atom-eol-segment
+                   telephone-line-atom-encoding-segment
+                   telephone-line-filesize-segment))
         (nil    . (telephone-line-minor-mode-segment))))
 (setq telephone-line-rhs
       '((nil    . (telephone-line-process-segment
+                   telephone-line-projectile-segment
                    telephone-line-vc-segment
                    telephone-line-erc-modified-channels-segment))
         (accent . (telephone-line-major-mode-segment))
-        (evil   . (telephone-line-airline-position-segment))))
+        (evil   . (telephone-line-misc-info-segment))))
 (setq telephone-line-primary-left-separator
       telephone-line-gradient)
 (setq telephone-line-primary-right-separator
