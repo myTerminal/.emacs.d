@@ -9,7 +9,7 @@
     (dumb-jump github "jacktasia/dumb-jump" t)
     (avy github "abo-abo/avy" t)
     (ace-window github "abo-abo/ace-window" t)
-    (workgroups2 github "pashinin/workgroups2" t ("src/*.el"))
+    (perspective github "nex3/perspective-el" t)
     (buffer-move github "lukhas/buffer-move" t)
     (ibuffer-vc github "purcell/ibuffer-vc" t)
     (window-shaper github "myTerminal/window-shaper" nil)
@@ -75,20 +75,14 @@
 
 (dumb-jump-mode)
 
-(setq wg-prefix-key
-      (kbd "M-z"))
-(setq wg-session-file
-      (concat mt/config-root
-		      "workgroups2-session-file"))
-(setq wg-session-load-on-start nil
-      wg-workgroups-mode-exit-save-behavior 'ask
-      wg-emacs-exit-save-behavior 'ask
-      wg-mode-line-display-on t
-      wg-flag-modified t
-      wg-mode-line-decor-left-brace "{"
-      wg-mode-line-decor-right-brace "}"
-      wg-mode-line-decor-divider ":")
-(workgroups-mode 1)
+(customize-set-variable 'persp-mode-prefix-key
+                        (kbd "M-z"))
+(customize-set-variable 'persp-state-default-file
+                        (concat mt/config-root
+                                "persp-session-file"))
+(customize-set-variable 'persp-modestring-short
+                        t)
+(persp-mode)
 
 (setq ibuffer-formats
       '((mark
@@ -147,7 +141,6 @@
 (dim-minor-names '((anzu-mode nil anzu)
                    (company-mode nil company)
                    (which-key-mode nil which-key)
-                   (workgroups-mode nil workgroups2)
                    (emacs-daily-events-global-mode " (!)" emacs-daily-events)
                    (outer-spaces-mode " _a_" outer-spaces)
                    (flyspell-mode " Aa" flyspell)

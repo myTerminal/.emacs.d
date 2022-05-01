@@ -25,8 +25,7 @@
 (require 'telephone-line)
 (setq telephone-line-lhs
       '((evil   . (telephone-line-misc-info-segment))
-        (accent . (telephone-line-buffer-segment
-                   telephone-line-workgroups2-segment))
+        (accent . (telephone-line-buffer-segment))
         (nil    . (telephone-line-minor-mode-segment))))
 (setq telephone-line-rhs
       '((nil    . (telephone-line-process-segment

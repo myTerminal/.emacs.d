@@ -54,9 +54,6 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
   ("+" mt/window-toggle-split-direction "Horizontal<>Vertical")
   ;; Jumping
   ("\\" ace-window "Jump to window" :color blue)
-  ;; Workspaces
-  ("/" wg-reload-session "Restore workspaces" :color blue)
-  ("C-\\" wg-switch-to-previous-workgroup "Switch workspace" :color blue)
   ;; Misc
   ("q" nil "Cancel"))
 
