@@ -43,6 +43,7 @@
     ;; Super-powers
     (which-key github "justbur/emacs-which-key" t)
     (counsel github "abo-abo/swiper" t ("counsel.el"))
+    (key-chord github "emacsorphanage/key-chord" nil)
     (hydra github "abo-abo/hydra" t)
     ;; Networking tools
     (mew github "kazu-yamamoto/Mew" t)
@@ -126,6 +127,8 @@
 (define-key projectile-mode-map
   (kbd "C-c C-p")
   'projectile-command-map)
+
+(key-chord-mode 1)
 
 (which-key-mode)
 

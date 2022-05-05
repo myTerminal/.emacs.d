@@ -15,10 +15,6 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
   ("z" mt/set-zoning "Enable zoning")
   ("x" zone-leave-me-alone "Disable zoning")
   ("r" window-shaper-mode "Resize windows")
-  ("q" nil "Cancel"))
-
-(defhydra mt/hydra-tools (:color blue)
-  "Tools"
   ("." neotree-toggle "neotree")
   ("/" term "Terminal")
   ("i" mt/prompt-to-connect-to-irc "Connect to IRC")
@@ -59,15 +55,12 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
   ;; Misc
   ("q" nil "Cancel"))
 
-(defhydra mt/hydra-main (:color blue)
-  "Options:"
-  ("o" mt/hydra-toggles/body "Toggles")
-  ("p" mt/hydra-misc/body "Misc")
-  ("[" mt/hydra-tools/body "Tools")
-  ("]" mt/hydra-editing/body "Editing")
-  ("\\" mt/hydra-windows/body "Windows/Buffers")
-  ;; Misc
-  ("q" nil "Cancel"))
+;;; Key-chords
+
+(key-chord-define-global "``" 'mt/hydra-toggles/body)
+(key-chord-define-global "[[" 'mt/hydra-misc/body)
+(key-chord-define-global "]]" 'mt/hydra-editing/body)
+(key-chord-define-global "\\\\" 'mt/hydra-windows/body)
 
 ;;; Regular key-bindings
 
@@ -92,9 +85,7 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
                 ("C-c s" . swiper)
                 ;; Misc
                 ("C-=" . mt/eval-and-replace)
-                ("M-x" . counsel-M-x)
-                ;; Hydras
-                ("C-\\" . mt/hydra-main/body))
+                ("M-x" . counsel-M-x))
               global-map)
 
 (mt/bind-keys '(
