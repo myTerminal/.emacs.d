@@ -26,6 +26,7 @@
     (rust-mode github "rust-lang/rust-mode" t)
     (csharp-mode github "emacs-csharp/csharp-mode" t)
     ;; Programming tools
+    (slime github "slime/slime" t ("*"))
     (projectile github "bbatsov/projectile" t)
     (counsel-projectile github "ericdanan/counsel-projectile" t)
     (projectile-extras github "myTerminal/projectile-extras" nil)
@@ -109,6 +110,9 @@
   "markdown-mode"
   "Major mode for editing Markdown files"
   t)
+
+(setq inferior-lisp-program
+      (executable-find "sbcl"))
 
 (if (eq system-type
         'windows-nt)
