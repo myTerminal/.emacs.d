@@ -129,7 +129,7 @@
                       (projectile-project-name))))
 (projectile-mode)
 (define-key projectile-mode-map
-  (kbd "C-c C-p")
+  (kbd "C-\\")
   'projectile-command-map)
 
 (key-chord-mode 1)
