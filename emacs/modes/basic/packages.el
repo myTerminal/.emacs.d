@@ -3,6 +3,7 @@
     (multiple-cursors github "magnars/multiple-cursors.el" t)
     (company github "company-mode/company-mode" t)
     (undo-tree github "akhayyat/emacs-undo-tree" nil ("undo-tree.el"))
+    (rainbow-mode github "emacsmirror/rainbow-mode" nil)
     (anzu github "emacsorphanage/anzu" t)
     (yasnippet github "joaotavora/yasnippet" t)
     (outer-spaces github "myTerminal/outer-spaces" nil)
