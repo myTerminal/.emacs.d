@@ -74,6 +74,7 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
                 ("C-x C-r" . counsel-recentf)
                 ("C-x k" . mt/kill-this-buffer)
                 ;; Text-editing
+                ("C-|" . undo-tree-visualize)
                 ("M-%" . anzu-query-replace)
                 ("C-}" . mc/mark-next-like-this)
                 ("C-{" . mc/mark-previous-like-this)

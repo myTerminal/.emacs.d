@@ -2,6 +2,7 @@
   '(;; Text-editing
     (multiple-cursors github "magnars/multiple-cursors.el" t)
     (company github "company-mode/company-mode" t)
+    (undo-tree github "akhayyat/emacs-undo-tree" nil ("undo-tree.el"))
     (anzu github "emacsorphanage/anzu" t)
     (yasnippet github "joaotavora/yasnippet" t)
     (outer-spaces github "myTerminal/outer-spaces" nil)
@@ -65,6 +66,8 @@
 
 (setq quelpa-update-melpa-p
       nil)
+
+(global-undo-tree-mode)
 
 (global-anzu-mode +1)
 
@@ -145,7 +148,8 @@
 
 (emacs-daily-events-global-mode)
 
-(dim-minor-names '((anzu-mode nil anzu)
+(dim-minor-names '((undo-tree-mode nil undo-tree)
+                   (anzu-mode nil anzu)
                    (projectile-mode nil projectile)
                    (company-mode " a_ " company)
                    (which-key-mode nil which-key)
