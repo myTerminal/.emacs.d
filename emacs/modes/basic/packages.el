@@ -54,11 +54,7 @@
     (dim github "alezost/dim.el" t)
     (golden-ratio github "roman/golden-ratio.el" t)
     (volume github "dbrock/volume.el" nil)
-    (emacs-visual-notifications github "myTerminal/emacs-visual-notifications" nil)
-    (emacs-daily-events github "myTerminal/emacs-daily-events" nil)
-    (emacs-home github "myTerminal/emacs-home" nil)
     (zone-quotes github "myTerminal/zone-quotes" nil)
-    (zone-tunnels github "myTerminal/zone-tunnels" nil)
     (marmalade-client github "nicferrier/emacs-marmalade-upload" nil)
     ))
 
@@ -147,14 +143,11 @@
       'ivy)
 (counsel-projectile-mode)
 
-(emacs-daily-events-global-mode)
-
 (dim-minor-names '((undo-tree-mode nil undo-tree)
                    (anzu-mode nil anzu)
                    (projectile-mode nil projectile)
                    (company-mode " a_ " company)
                    (which-key-mode nil which-key)
-                   (emacs-daily-events-global-mode " (!)" emacs-daily-events)
                    (outer-spaces-mode nil outer-spaces)
                    (flyspell-mode " Aa" flyspell)
                    (eldoc-mode nil eldoc)

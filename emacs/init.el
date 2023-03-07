@@ -8,11 +8,9 @@
   "Loads core and then conditionally loads configs"
   (cl-flet* ((start-basic ()
                           (mt/load-file "modes/basic/misc")
-                          (mt/load-file "modes/basic/variables")
                           (mt/load-file "modes/basic/packages")
                           (mt/load-file "modes/basic/file-associations")
                           (mt/load-file "modes/basic/key-bindings")
-                          (mt/load-file "modes/basic/workstation")
                           (mt/load-file "modes/basic/hooks"))
              (start-standard ()
                              (mt/load-file "modes/standard/misc")
