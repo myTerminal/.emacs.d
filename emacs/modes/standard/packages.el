@@ -44,9 +44,3 @@
 (setq telephone-line-primary-right-separator
       telephone-line-gradient)
 (telephone-line-mode t)
-
-(theme-looper-set-favorite-themes '(overcast
-                                    material
-                                    green-phosphor
-                                    hemisu-dark
-                                    leuven))

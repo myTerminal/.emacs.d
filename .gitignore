@@ -11,7 +11,6 @@
 !/emacs/core.el
 !/emacs/lib.el
 !/emacs/init.el
-!/emacs/_zone-quotes-masseffect.el
 
 !/LICENSE
 !/README.md

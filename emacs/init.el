@@ -27,7 +27,6 @@
     (start-basic)
     (if (display-graphic-p)
         (start-standard))
-    (mt/load-file "_zone-quotes-masseffect")
     (mt/print-welcome-message)))
 
 ;; Start

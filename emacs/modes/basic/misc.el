@@ -7,12 +7,6 @@
       (add-to-list 'exec-path
                    "~/.cargo/bin")))
 
-;; User
-(setq user-full-name
-      "Mohammed Ismail Ansari")
-(setq user-mail-address
-      "team.terminal@gmail.com")
-
 ;; Backup
 (setq backup-inhibited
       t)
