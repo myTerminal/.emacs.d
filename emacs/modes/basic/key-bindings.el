@@ -15,7 +15,7 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
   ("z" mt/set-zoning "Enable zoning")
   ("x" zone-leave-me-alone "Disable zoning")
   ("r" window-shaper-mode "Resize windows")
-  ("." neotree-toggle "neotree")
+  ("." ztree-dir "ztree")
   ("/" term "Terminal")
   ("i" mt/prompt-to-connect-to-irc "Connect to IRC")
   ("," emacs-home-show "emacs-home")

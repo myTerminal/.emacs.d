@@ -39,7 +39,6 @@
     (dired-narrow github "Fuco1/dired-hacks" nil)
     (dired-subtree github "Fuco1/dired-hacks" nil)
     (dired-ranger github "Fuco1/dired-hacks" nil)
-    (neotree github "jaypei/emacs-neotree" t)
     (ztree github "fourier/ztree" nil)
     ;; Super-powers
     (which-key github "justbur/emacs-which-key" t)
@@ -99,12 +98,6 @@
         'windows-nt)
     (setq projectile-indexing-method
           'alien))
-(setq projectile-switch-project-action
-      (lambda ()
-        (cond ((and (fboundp 'neo-global--window-exists-p)
-                    (neo-global--window-exists-p))
-               (neotree-projectile-action))
-              (t (counsel-projectile)))))
 (setq projectile-mode-line
       '(:eval (format " Project:%s"
                       (projectile-project-name))))
