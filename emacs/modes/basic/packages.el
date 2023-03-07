@@ -39,7 +39,6 @@
     (dired-narrow github "Fuco1/dired-hacks" nil)
     (dired-subtree github "Fuco1/dired-hacks" nil)
     (dired-ranger github "Fuco1/dired-hacks" nil)
-    (ranger github "ralesi/ranger" t)
     (neotree github "jaypei/emacs-neotree" t)
     (ztree github "fourier/ztree" nil)
     ;; Super-powers
