@@ -44,3 +44,5 @@
 (setq telephone-line-primary-right-separator
       telephone-line-gradient)
 (telephone-line-mode t)
+
+(theme-looper-enable-theme mt/variable/color-theme)
