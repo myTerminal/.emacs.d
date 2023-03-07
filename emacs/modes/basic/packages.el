@@ -13,7 +13,6 @@
     (ace-window github "abo-abo/ace-window" t)
     (perspective github "nex3/perspective-el" t)
     (buffer-move github "lukhas/buffer-move" t)
-    (ibuffer-vc github "purcell/ibuffer-vc" t)
     (window-shaper github "myTerminal/window-shaper" nil)
     ;; Language modes
     (markdown-mode github "jrblevin/markdown-mode" t)
@@ -85,23 +84,6 @@
 (customize-set-variable 'persp-modestring-short
                         t)
 (persp-mode)
-
-(setq ibuffer-formats
-      '((mark
-         " "
-         read-only
-         " "
-         modified
-         " "
-         (name 18 18 :left :elide)
-         " "
-         (vc-status 16 16 :left)
-         " "
-         (size 9 -1 :right)
-         " "
-         (mode 16 16 :left :elide)
-         " "
-         filename-and-process)))
 
 (setq inferior-js-program-command
       "node --interactive")

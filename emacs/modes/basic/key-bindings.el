@@ -66,7 +66,6 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
 
 (mt/bind-keys '(
                 ;; Buffer/Window management
-                ("C-x C-b" . ibuffer)
                 ("C-x b" . ivy-switch-buffer)
                 ("C-c p" . mt/switch-to-previous-buffer)
                 ("C-c b" . ivy-push-view)
