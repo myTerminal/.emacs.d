@@ -52,7 +52,6 @@
     (golden-ratio github "roman/golden-ratio.el" t)
     (volume github "dbrock/volume.el" nil)
     (zone-quotes github "myTerminal/zone-quotes" nil)
-    (marmalade-client github "nicferrier/emacs-marmalade-upload" nil)
     ))
 
 (mapc 'mt/install-package-with-quelpa
