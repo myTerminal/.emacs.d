@@ -1,7 +1,5 @@
 (defvar mt/packages-standard
-  '(;; Text-editing
-    (eagle-eye github "myTerminal/eagle-eye" nil)
-    ;; Language modes
+  '(;; Language modes
     (latex-preview-pane github "jsinglet/latex-preview-pane" nil)
     ;; Programming tools
     (diff-hl github "dgutov/diff-hl" t)
