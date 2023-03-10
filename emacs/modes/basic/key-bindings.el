@@ -18,7 +18,6 @@ _SPC_ outer-spaces:  %`outer-spaces-mode
   ("." ztree-dir "ztree")
   ("/" term "Terminal")
   ("i" mt/prompt-to-connect-to-irc "Connect to IRC")
-  ("," emacs-home-show "emacs-home")
   ("q" nil "Cancel"))
 
 (defhydra mt/hydra-editing (:color blue)
