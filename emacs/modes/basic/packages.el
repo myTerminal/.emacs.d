@@ -46,7 +46,7 @@
     (key-chord github "emacsorphanage/key-chord" nil)
     (hydra github "abo-abo/hydra" t)
     ;; Networking tools
-    (mew github "kazu-yamamoto/Mew" t)
+    (mew github "kazu-yamamoto/Mew" t ("elisp/*.el"))
     ;; Misc
     (dim github "alezost/dim.el" t)
     (golden-ratio github "roman/golden-ratio.el" t)
