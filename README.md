@@ -5,6 +5,8 @@
 
 My personal Emacs configuration, finally as a separate repository
 
+> **Note:** This project has been deprecated in favor of [super-emacs](https://github.com/myTerminal/super-emacs).
+
 ## History
 
 I remember putting up my first Emacs configuration on GitHub during my earlier days with [Git](https://git-scm.com) in 2014 with an intention to sync my configs across computers (most of which were Windows PCs back then) while learning Git at the same time. It looked like [this](https://github.com/myTerminal/dotfiles/tree/b384107562817ef181111c8c27bccaaa47614975) when it started, which clearly shows my plans for creating multiple configs along with my 'Standard' one.
